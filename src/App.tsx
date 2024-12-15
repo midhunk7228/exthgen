@@ -1,8 +1,11 @@
+import BuyMeACoffee from './components/BuyMeACoffee';
+import InnovationSection from './components/Innovation';
 import ProjectList from './components/ProjectList';
 import RippleWave from './components/RippleEffect'
 import PartnerCarousel from './components/SlideShow';
 import PartnerLogosSlider from './components/SlideShow';
 import Slideshow from './components/SlideShow'
+import TestimonialSection from './components/Testimonial';
 import WaterDropWave from './components/WaterDropWave'
 import WhatweOffer from './components/WhatweOffer'
 
@@ -17,7 +20,7 @@ function App() {
     
   ];
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen w-full'>
       <WaterDropWave />
       {/* <RippleWave /> */}
       <WhatweOffer />
@@ -25,6 +28,9 @@ function App() {
         <PartnerLogosSlider />
       </div>
       <ProjectList />
+      <TestimonialSection />
+      <InnovationSection />
+      <BuyMeACoffee />
     </div>
   )
 }

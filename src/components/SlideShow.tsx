@@ -45,7 +45,7 @@ const PartnerLogosSlider = () => {
   ];
 
   return (
-    <div className="container mx-auto px-96 pt-28 pb-28 bg-gradient-to-r from-white to-transparent">
+    <div className="container mx-auto px-96 pt-16 pb-28 bg-gradient-to-r from-white to-transparent">
       <Slider {...settings} className="partner-logos-slider flex items-center">
         {partnerLogos.map((logo, index) => (
           <div key={index} className="flex items-center justify-center px-4 ">

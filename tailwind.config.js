@@ -53,9 +53,16 @@ export default {
       },
 
       backgroundImage: {
-        'exthgen-gradient': 'linear-gradient(104.24deg, #FD169C 0%, #FE497A 47.92%, #FE7B59 100%)',
+        'exthgen-gradient': 'linear-gradient(to right, #FD169C, #FE497A, #FE7B59)',
+      },
+      colors: {
+        'gradient-text': 'transparent',
+      },
+      textGradient: {
+        'exthgen': 'bg-clip-text text-transparent bg-exthgen-gradient',
       },
     },
+    
   },
   plugins: [],
 };
