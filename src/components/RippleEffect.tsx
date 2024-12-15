@@ -2,7 +2,7 @@ import React from 'react';
 
 const RippleWave = () => {
   return (
-    <div className="relative w-full h-screen bg-gray-100 flex items-center justify-center overflow-hidden">
+    <div className="relative w-full bg-gray-100 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
         {/* Multiple wave layers with different animations and opacities */}
         <div className="absolute w-0 h-0 bg-white rounded-full animate-ripple-1 opacity-70"></div>

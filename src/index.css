@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap');
-html,body{
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  overflow: hidden;
-  
-}
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap");
+
+/* # Start Generation Here */
+@import url("https://fonts.googleapis.com/css2?family=Visby+CF:wght@100;300;400;500;600;700;800;900&display=swap");
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-list .slick-track {
+    display: flex;
+    align-items: center;
+}

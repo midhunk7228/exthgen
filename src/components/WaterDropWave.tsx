@@ -23,34 +23,11 @@ const WaterDropWave = () => {
   }, [controls]);
 
   return (
-    <div className="flex justify-center items-center h-dvh bg-[#FFFFFF66]">
+    // <div className="flex justify-center items-center bg-[#FFFFFF66] h-[859px]">
+    <div className="flex justify-center items-center bg-[#E8ECEE] py-80">
       <h1 className="flex text-center text-[64px] leading-[80px] font-normal font-hedvig-serif">Crafting Digital Ripples
          <br />
          for Tomorrow</h1>
-      {/* <motion.div
-        variants={waveVariants}
-        initial="hidden"
-        animate={controls}
-        style={{
-          width: '50px',
-          height: '50px',
-          borderRadius: '50%',
-          backgroundColor: '#0077b6',
-          marginRight: '20px',
-        }}
-      />
-      <motion.div
-        variants={waveVariants}
-        initial="hidden"
-        animate={controls}
-        style={{
-          width: '50px',
-          height: '50px',
-          borderRadius: '50%',
-          backgroundColor: '#0077b6',
-          marginLeft: '20px',
-        }}
-      /> */}
     </div>
   );
 };
