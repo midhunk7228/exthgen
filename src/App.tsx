@@ -24,11 +24,11 @@ function App() {
       <WaterDropWave />
       {/* <RippleWave /> */}
       <WhatweOffer />
-      <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center w-full">
         <PartnerLogosSlider />
-      </div>
+      </div> */}
       <ProjectList />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <InnovationSection />
       <BuyMeACoffee />
     </div>

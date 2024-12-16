@@ -53,7 +53,8 @@ export default {
       },
 
       backgroundImage: {
-        'exthgen-gradient': 'linear-gradient(to right, #FD169C, #FE497A, #FE7B59)',
+        'exthgen-gradient': 'linear-gradient(104.24deg, #FD169C 0%, #FE497A 47.92%, #FE7B59 100%)',
+        // linear-gradient(104.24deg, #FD169C 0%, #FE497A 47.92%, #FE7B59 100%);
       },
       colors: {
         'gradient-text': 'transparent',

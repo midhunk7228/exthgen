@@ -10,7 +10,7 @@ const InnovationSection = () => {
           <h1 className=" font-light">Innovation</h1>
           <div className="w-20 h-px bg-gradient-to-r from-neutral-400 to-transparent mr-4"></div>
         </div>
-        <h1 className="flex text-center text-[64px] leading-[84px] font-normal">
+        <h1 className="flex text-center md:text-[64px] text-[26px] md:leading-[84px] leading-[34px] font-normal">
           Our Commitment to <br />
           Excellence and Innovation
         </h1>

@@ -36,32 +36,32 @@ const TestimonialSection = () => {
     autoplaySpeed: 1500,
     responsive: [
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        },
+        }
       },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
     ],
   };
 
   return (
-    <div className="py-28">
-      <div className="container mx-auto">
+    <div className="py-28 w-full">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <h2 className="text-3xl font-normal font-hedvig-serif mb-8 text-center">
           Testimonials
         </h2>
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="px-4">
-              <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center mb-28 shadow-md relative">
+            <div key={testimonial.id} className="px-4 w-full">
+              <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center mb-28 shadow-md relative w-full">
                 <LuQuote className="rotate-180 text-6xl text-[#E1E3EE]" />
                 <p className="text-gray-800 text-center mb-11 mt-9">
                   {testimonial.text}
@@ -73,7 +73,7 @@ const TestimonialSection = () => {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 </div>
-                <div className=" absolute -bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center mt-16">
+                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center mt-16">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
