@@ -9,7 +9,7 @@ const TeamPage = () => {
       role: "Director of everything",
     },
     {
-      image: "shaheed.png",
+      image: "shaheed1.png",
       name: "Shaheed",
       role: "Angel Richie",
     },
@@ -19,7 +19,7 @@ const TeamPage = () => {
       role: "Business Connector",
     },
     {
-      image: "shaima.jpeg",
+      image: "shaima_test.png",
       name: "Shaima",
       role: "Design and Culture Curator",
     },
@@ -29,25 +29,25 @@ const TeamPage = () => {
       role: "Logical Systems Analyst",
     },
     {
-      image: "midhun.jpeg",
+      image: "midhun1.png",
       name: "Midhun",
       role: "Code Artisan",
     },
-
     {
-      image: "sahal.jpeg",
-      name: "Sahal",
-      role: "Master of Analytics and Discipline",
+      image: "dilshad.png",
+      name: "Dilshad",
+      role: "Cool Dev",
     },
+    
     {
-      image: "shahadhil.jpeg",
+      image: "shahadil.png",
       name: "Shahadhil",
       role: "DevOps Architect",
     },
     {
-      image: "dilshad.jpeg",
-      name: "Dilshad",
-      role: "Cool Dev",
+      image: "sahal.png",
+      name: "Sahal",
+      role: "Master of Analytics and Discipline",
     },
   ];
 

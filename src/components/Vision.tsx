@@ -66,7 +66,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-col items-center justify-center bg-white relative z-20 pb-5">
+      <div className="hidden md:flex flex-col items-center justify-center bg-white relative z-20 pb-[3.25rem]">
         <div className="max-w-3xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="bg-white rounded-[36px] shadow-lg overflow-hidden -mt-20 ">
             <div className="px-20 py-8">
