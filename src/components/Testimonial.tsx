@@ -8,21 +8,31 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      text: "Exthgen transformed our app idea into a user-friendly reality, exceeding our expectations every step of the way.",
-      author: "John Doe",
+      text: "Exthgen Technologies LLP delivered an excellent software solution for Forum Centre. Their professionalism, expertise, and commitment to our needs streamlined our operations and enhanced efficiency. Highly recommended!",
+      author: "siddique",
       rating: 5,
+      avatar: "siddique.jpeg"
     },
     {
       id: 2,
       text: "Exthgen transformed our app idea into a user-friendly reality, exceeding our expectations every step of the way.",
-      author: "Jane Smith",
+      author: "swopnil",
       rating: 5,
+      avatar: "swopnil.jpeg"
     },
     {
       id: 3,
       text: "Exthgen transformed our app idea into a user-friendly reality, exceeding our expectations every step of the way.",
-      author: "Michael Johnson",
+      author: "shaheed",
       rating: 5,
+      avatar: "shaheed.png"
+    },
+    {
+      id: 4,
+      text: "How to speak English is an incredible language learning app with outstanding practice features. The speech recognition tech provides real-time feedback, and the conversational exercises are immersive. Gamification keeps learning fun, and the progress tracking is helpful. Highly recommend for improving English speaking skills!",
+      author: "mohammed yaseen",
+      rating: 5,
+      avatar: "unnamed.webp"
     }
   ];
 
@@ -53,7 +63,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <div className="py-28 w-full">
+    <div className="py-28 w-full overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <h2 className="text-3xl font-normal font-hedvig-serif mb-8 text-center">
           Testimonials
@@ -68,7 +78,7 @@ const TestimonialSection = () => {
                 </p>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
                   <img
-                    src={"./Projects/test.png"}
+                    src={`./Testimonials/${testimonial.avatar}`}
                     alt="Avatar"
                     className="w-12 h-12 rounded-full object-cover"
                   />

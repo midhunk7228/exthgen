@@ -42,7 +42,7 @@ function ProjectList() {
           Projects
         </span>
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-y-16 lg:gap-x-0 justify-center">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}

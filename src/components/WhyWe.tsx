@@ -1,33 +1,33 @@
-import React from 'react';
+import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhyWe = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-[#E8ECEE] py-16">
-      <div className="md:w-1/2"></div>
-      <div className="md:w-1/2 mt-12 md:mt-0">
-        <div className="bg-white rounded-full shadow-lg overflow-hidden max-w-3xl mx-auto">
-          <div className="px-12 py-12">
-            <h2 className="text-4xl font-bold mb-6 text-center">
+    <div className="flex flex-col lg:flex-row items-center justify-center bg-[#E8ECEE] py-10 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="lg:w-1/2 w-full mb-10 lg:mb-0 lg:pr-8">
+        <div className="hidden lg:block"></div>
+      </div>
+      <div className="lg:w-1/2 w-full lg:-ml-20 lg:pr-4">
+        <div className="bg-white rounded-2xl md:rounded-[36px] shadow-lg overflow-hidden max-w-xl lg:max-w-3xl mx-auto">
+          <div className="px-6 md:px-12 py-12 md:py-16 lg:py-20">
+            <h2 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-left">
+              Empower
+            </h2>
+            <h2 className="text-2xl md:text-4xl font-normal font-hedvig-serif mb-4 md:mb-6 text-left">
               Why Choose Exthgen for Your Development Needs?
             </h2>
-            <p className="text-lg leading-relaxed text-center">
+            <p className="text-base md:text-lg leading-relaxed text-left text-[#323442] mb-6 md:mb-8">
               At Exthgen, we bring a wealth of expertise and a commitment to
               reliability in every project. Our tailored solutions ensure that
               your unique needs are met with precision and care.
             </p>
-            <div className="flex justify-center space-x-4 mt-8">
-              <a
-                href="#"
-                className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-full transition-colors duration-300"
-              >
-                Join Us
-              </a>
-              <a
-                href="#"
-                className="border border-gray-700 hover:bg-gray-100 text-gray-700 font-medium py-3 px-6 rounded-full transition-colors duration-300"
-              >
+            <div className="flex flex-row items-center justify-start gap-4 font-visby">
+              <button className="bg-exthgen-gradient text-white py-2 md:py-3 px-4 md:px-6 hover:bg-pink-600 rounded-full text-sm md:text-base font-bold leading-6 flex items-center">
+                Join Us <FaArrowRightLong className="ml-2" />
+              </button>
+              <button className="bg-white text-gray-800 py-2 md:py-3 px-4 md:px-6 border border-[#1E2028] hover:bg-gray-100 rounded-full text-sm md:text-base font-bold leading-6">
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         </div>

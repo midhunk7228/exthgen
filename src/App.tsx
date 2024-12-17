@@ -28,7 +28,7 @@ function App() {
         <PartnerLogosSlider />
       </div> */}
       <ProjectList />
-      {/* <TestimonialSection /> */}
+      <TestimonialSection />
       <InnovationSection />
       <BuyMeACoffee />
     </div>
