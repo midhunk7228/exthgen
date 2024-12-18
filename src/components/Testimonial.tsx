@@ -8,7 +8,7 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      text: "Exthgen Technologies LLP delivered an excellent software solution for Forum Centre. Their professionalism, expertise, and commitment to our needs streamlined our operations and enhanced efficiency. Highly recommended!",
+      text: "Exthgen Technologies LLP delivered an excellent software solution. Their expertise streamlined our operations and enhanced efficiency. Highly recommended!",
       author: "siddique",
       rating: 5,
       avatar: "siddique.jpeg"
@@ -22,14 +22,14 @@ const TestimonialSection = () => {
     },
     {
       id: 3,
-      text: "Exthgen transformed our app idea into a user-friendly reality, exceeding our expectations every step of the way.",
+      text: "Exthgen Technologies LLP delivered the Brickly Construction Management app with exceptional quality. Their solution streamlined our processes and improved project efficiency. Highly reliable team!",
       author: "shaheed",
       rating: 5,
       avatar: "shaheed.png"
     },
     {
       id: 4,
-      text: "How to speak English is an incredible language learning app with outstanding practice features. The speech recognition tech provides real-time feedback, and the conversational exercises are immersive. Gamification keeps learning fun, and the progress tracking is helpful. Highly recommend for improving English speaking skills!",
+      text: "How to Speak English offers outstanding language learning features. Its speech recognition and immersive exercises make learning engaging. Highly recommend for improving English skills!",
       author: "mohammed yaseen",
       rating: 5,
       avatar: "unnamed.webp"
@@ -71,7 +71,7 @@ const TestimonialSection = () => {
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="px-4 w-full">
-              <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center mb-28 shadow-md relative w-full">
+              <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center mb-28 shadow-md relative w-full h-[260px]"> {/* Added h-[350px] for fixed height */}
                 <LuQuote className="rotate-180 text-6xl text-[#E1E3EE]" />
                 <p className="text-gray-800 text-center mb-11 mt-9">
                   {testimonial.text}

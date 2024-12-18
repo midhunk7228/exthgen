@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { LiaFacebookSquare, LiaInstagram, LiaLinkedin, LiaWhatsapp } from "react-icons/lia";
+import { RiTwitterXLine } from "react-icons/ri"
 
 function BuyMeACoffee() {
   return (
@@ -29,21 +30,21 @@ function BuyMeACoffee() {
         </div>
       </div>
       <div className="flex w-full justify-between md:px-20 px-6 pb-12 pt-28">
-        <div className="flex border border-[#666666] rounded-full px-2 py-1">
+        <a href="https://www.facebook.com/exthgen" target="_blank" rel="noopener noreferrer" className="flex border border-[#666666] rounded-full px-2 py-1">
           <LiaFacebookSquare className="text-2xl text-[#666666]" />
-        </div>
-        <div className="flex border border-[#666666] rounded-full px-2 py-1">
+        </a>
+        <a href="https://www.instagram.com/exthgen" target="_blank" rel="noopener noreferrer" className="flex border border-[#666666] rounded-full px-2 py-1">
           <LiaInstagram className="text-2xl text-[#666666]" />
-        </div>
+        </a>
         <div className="flex border border-[#666666] rounded-full px-2 py-1">
           <LiaWhatsapp className="text-2xl text-[#666666]" />
         </div>
-        <div className="flex border border-[#666666] rounded-full px-2 py-1">
-          <LiaFacebookSquare className="text-2xl text-[#666666]" />
+        <div className="flex border border-[#666666] rounded-full px-3 py-1 pt-2">
+          <RiTwitterXLine className="text-base text-[#666666]" />
         </div>
-        <div className="flex border border-[#666666] rounded-full px-2 py-1">
+        <a href="https://www.linkedin.com/company/exthgen/" target="_blank" rel="noopener noreferrer" className="flex border border-[#666666] rounded-full px-2 py-1">
           <LiaLinkedin className="text-2xl text-[#666666]" />
-        </div>
+        </a>
       </div>
     </div>
   );

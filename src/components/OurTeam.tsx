@@ -9,27 +9,27 @@ const TeamPage = () => {
       role: "Director of everything",
     },
     {
-      image: "shaheed1.png",
+      image: "shaheed.png",
       name: "Shaheed",
       role: "Angel Richie",
     },
     {
-      image: "nuha_test.png",
+      image: "nuha.png",
       name: "Nuha",
       role: "Business Connector",
     },
     {
-      image: "shaima_test.png",
+      image: "shaima.png",
       name: "Shaima",
       role: "Design and Culture Curator",
     },
     {
-      image: "arshak.jpeg",
+      image: "arshak.png",
       name: "Arshak",
       role: "Logical Systems Analyst",
     },
     {
-      image: "midhun1.png",
+      image: "midhun.png",
       name: "Midhun",
       role: "Code Artisan",
     },
@@ -41,13 +41,28 @@ const TeamPage = () => {
     
     {
       image: "shahadil.png",
-      name: "Shahadhil",
+      name: "Shahadil",
       role: "DevOps Architect",
     },
     {
       image: "sahal.png",
       name: "Sahal",
       role: "Master of Analytics and Discipline",
+    },
+    {
+      image: "afeefa.png",
+      name: "Afeefa",
+      role: "App Wizard",
+    },
+    {
+      image: "rafa.png",
+      name: "Rafath",
+      role: "Search Sorcerer",
+    },
+    {
+      image: "irshad.png",
+      name: "Irshad",
+      role: "Vibe Dev",
     },
   ];
 
@@ -67,7 +82,7 @@ const TeamPage = () => {
             {teamMembers.map((member, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img
-                  className="w-96 h-72 rounded-[32px] object-cover transition-transform duration-300 hover:scale-105"
+                  className={`w-96 h-72 rounded-[32px] object-cover transition-transform duration-300 hover:scale-105 `}
                   src={`./Team/${member.image}`}
                   alt={member.name}
                 />

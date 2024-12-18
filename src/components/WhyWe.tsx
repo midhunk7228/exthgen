@@ -3,11 +3,15 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhyWe = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center bg-[#E8ECEE] py-10 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="lg:w-1/2 w-full mb-10 lg:mb-0 lg:pr-8">
+    <div className="relative flex flex-col lg:flex-row items-center justify-center bg-[#E8ECEE] py-10 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img src="./wave.png" alt="Background" className="absolute inset-0 object-cover w-full h-full z-10" />
+        <div className="absolute inset-0 bg-white opacity-80 z-20"></div> {/* Red overlay */}
+      </div>
+      <div className="lg:w-1/2 w-full mb-10 lg:mb-0 lg:pr-8 relative z-30"> {/* Added z-30 to place above the image */}
         <div className="hidden lg:block"></div>
       </div>
-      <div className="lg:w-1/2 w-full lg:-ml-20 lg:pr-4">
+      <div className="lg:w-1/2 w-full lg:-ml-20 lg:pr-4 relative z-30"> {/* Added z-30 to place above the image */}
         <div className="bg-white rounded-2xl md:rounded-[36px] shadow-lg overflow-hidden max-w-xl lg:max-w-3xl mx-auto">
           <div className="px-6 md:px-12 py-12 md:py-16 lg:py-20">
             <h2 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-left">
