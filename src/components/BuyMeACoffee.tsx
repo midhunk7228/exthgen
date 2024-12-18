@@ -1,4 +1,3 @@
-import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { LiaFacebookSquare, LiaInstagram, LiaLinkedin, LiaWhatsapp } from "react-icons/lia";
 import { RiTwitterXLine } from "react-icons/ri"

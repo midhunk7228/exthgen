@@ -1,4 +1,3 @@
-import React from "react";
 import Vision from "../../components/Vision";
 import InnovationSection from "../../components/Innovation";
 import BuyMeACoffee from "../../components/BuyMeACoffee";

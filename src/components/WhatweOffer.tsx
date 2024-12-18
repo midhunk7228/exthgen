@@ -1,6 +1,4 @@
-import React from "react";
 import "react-slideshow-image/dist/styles.css";
-import Slideshow from "./SlideShow";
 
 function WhatweOffer() {
   return (
