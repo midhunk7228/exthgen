@@ -2,11 +2,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { LiaFacebookSquare, LiaInstagram, LiaLinkedin, LiaWhatsapp } from "react-icons/lia";
 import { RiTwitterXLine } from "react-icons/ri"
 
-function BuyMeACoffee() {
+function BuyMeACoffee({url}:any) {
   return (
     <div
       className="flex flex-col bg-cover bg-center text-white md:pt-52 pt-32"
-      style={{ backgroundImage: "url('./bottom_img.jpeg')" }}
+      style={{ backgroundImage: `url(${url})` }}
     >
       <div className="flex justify-center items-center flex-col font-hedvig-serif">
         <h1 className="flex text-center md:text-[64px] text-[32px] md:leading-[84px] leading-[40px] font-normal">
@@ -23,7 +23,7 @@ function BuyMeACoffee() {
           </p>
         </div>
         <div className="mt-8 flex space-x-4 font-visby md:pt-16 pt-4">
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
+          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center">
             Free Brainstorm <FaArrowRightLong className="ml-2" />
           </button>
         </div>

@@ -55,7 +55,7 @@ function ProjectList() {
   );
 }
 
-const ProjectCard = ({ image, name, tags }: { image: string; name: string; tags: string[] }) => {
+export const ProjectCard = ({ image, name, tags }: { image: string; name: string; tags: string[] }) => {
   return (
     <div className="flex flex-col w-full max-w-full sm:max-w-md lg:max-w-lg mx-auto">
       <div className="rounded-2xl sm:rounded-[36px] shadow-md overflow-hidden w-full aspect-video">
