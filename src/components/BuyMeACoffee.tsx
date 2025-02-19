@@ -13,7 +13,7 @@ function BuyMeACoffee({url}:any) {
           {`Let’s Have a Coffee`}
         </h1>
         <div className="flex flex-col w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
-          <p className="text-center md:text-lg text-lg leading-7 gap-3 flex flex-col text-[#A7ACC1]">
+          <p className="text-center md:text-lg text-sm leading-7 gap-3 flex flex-col text-[#A7ACC1]">
             Englebook is a fun and engaging English learning app. It offers
             interactive lessons, real-time feedback, and a community of learners
             to help users improve their vocabulary, grammar, and pronunciation.

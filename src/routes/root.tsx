@@ -3,6 +3,7 @@ import App from "../App";
 import About from "../pages/About/Index";
 import Portfolio from "../pages/Portfolio/Index";
 import PortfolioDetails from "../pages/Portfolio/PortfolioDetails";
+import Careers from "../pages/Careers/Index";
 
 export const router = createBrowserRouter([
   {
@@ -20,5 +21,9 @@ export const router = createBrowserRouter([
   {
     path: "portfolio-details/:id",
     element: <PortfolioDetails />,
+  },
+  {
+    path: "careers",
+    element: <Careers />,
   },
 ]);

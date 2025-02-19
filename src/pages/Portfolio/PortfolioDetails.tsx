@@ -327,107 +327,40 @@ const PortfolioDetails = () => {
 
       {/* App Image Section */}
       <div className="relative mt-6 md:mt-18 pb-0 flex flex-col max-w-7xl mx-auto gap-[100px] pb-16">
-        {/* <div className="relative w-full md:w-auto">
+         <div className={`relative ${isMobile ? 'w-full aspect-square px-3' : 'w-full'}`}>
           <img
             src="../Projects/queue.png"
             alt="The Queue App Screenshots"
-            className={`object-cover ${
-              isMobile ? "w-64 h-64 mx-auto rounded-lg" : "w-full h-auto"
-            }`}
-          />
-        </div>
-        <div className="relative w-full md:w-auto flex items-center justify-center gap-[150px]">
-          <div className="flex flex-col items-center justify-center gap-3">
-            <h4 className="text-black  text-xl">Project</h4>
-            <p className="text-black  text-sm font-light">E-commerce App</p>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-3">
-            <h4 className="text-black  text-xl">Client</h4>
-            <p className="text-black  text-sm font-light">Retail Brand</p>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-3">
-            <h4 className="text-black  text-xl">Duration</h4>
-            <p className="text-black  text-sm font-light">6 Months</p>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-3">
-            <h4 className="text-black  text-xl">Impact</h4>
-            <p className="text-black  text-sm font-light">Increased Sales</p>
-          </div>
-        </div>
-        <div className="relative w-full md:w-auto">
-          <img
-            src="../Projects/queue.png"
-            alt="The Queue App Screenshots"
-            className={`object-cover ${
-              isMobile ? "w-64 h-64 mx-auto rounded-lg" : "w-full h-auto"
-            }`}
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="w-[50%]"></div>
-          <div className="w-[50%] font-light text-2xl text-[#1E2028]">
-            <p>
-              We love working with small and medium businesses, helping them
-              grow with tech that just works. Our goal is to keep things simple,
-              scalable, and useful so every business, no matter how small, can
-              reach its full potential.{" "}
-            </p>
-            <br />
-            <p>Together, let’s grow, succeed, and build something amazing.</p>
-          </div>
-        </div>
-        <div className="relative w-full md:w-auto">
-          <img
-            src="../Projects/queue.png"
-            alt="The Queue App Screenshots"
-            className={`object-cover ${
-              isMobile ? "w-64 h-64 mx-auto rounded-lg" : "w-full h-auto"
-            }`}
-          />
-        </div>
-        <div className="relative w-full md:w-auto">
-          <img
-            src="../Projects/queue.png"
-            alt="The Queue App Screenshots"
-            className={`object-cover ${
-              isMobile ? "w-64 h-64 mx-auto rounded-lg" : "w-full h-auto"
-            }`}
-          />
-        </div> */}
-        <div className="relative w-full flex justify-center">
-          <img
-            src="../Projects/queue.png"
-            alt="The Queue App Screenshots"
-            className="w-full max-w-xs md:max-w-full lg:max-w-full mx-auto rounded-lg"
+            className={`rounded-[32px] object-cover ${isMobile ? 'w-full h-full' : 'w-full'}`}
           />
         </div>
 
         {/* Project Info Section */}
-        <div className="relative w-full flex flex-col md:flex-row items-center justify-center md:gap-[150px] text-center md:text-left">
-          <div className="flex flex-col items-center justify-center gap-3">
+        <div className={`relative w-full grid grid-cols-2 md:grid-cols-4 text-center md:text-center items-center justify-center place-items-center ${isMobile ? "gap-4" : ""}`}>
+          <div className={`flex flex-col items-center justify-center ${isMobile ? "gap-0" : "gap-3"} `}>
             <h4 className="text-black text-lg md:text-xl">Project</h4>
             <p className="text-black text-sm font-light">E-commerce App</p>
           </div>
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div className={`flex flex-col items-center justify-center ${isMobile ? "gap-0" : "gap-3"} `}>
             <h4 className="text-black text-lg md:text-xl">Client</h4>
             <p className="text-black text-sm font-light">Retail Brand</p>
           </div>
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div className={`flex flex-col items-center justify-center ${isMobile ? "gap-0" : "gap-3"} `}>
             <h4 className="text-black text-lg md:text-xl">Duration</h4>
             <p className="text-black text-sm font-light">6 Months</p>
           </div>
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div className={`flex flex-col items-center justify-center ${isMobile ? "gap-0" : "gap-3"} `}>
             <h4 className="text-black text-lg md:text-xl">Impact</h4>
             <p className="text-black text-sm font-light">Increased Sales</p>
           </div>
         </div>
 
         {/* Image 2 */}
-        <div className="relative w-full flex justify-center">
+        <div className={`relative ${isMobile ? 'w-full aspect-square px-3' : 'w-full'}`}>
           <img
             src="../Projects/queue.png"
             alt="The Queue App Screenshots"
-            className="w-full max-w-xs md:max-w-full lg:max-w-full mx-auto rounded-lg"
+            className={`rounded-[32px] object-cover ${isMobile ? 'w-full h-full' : 'w-full'}`}
           />
         </div>
 
@@ -447,20 +380,20 @@ const PortfolioDetails = () => {
         </div>
 
         {/* Image 3 */}
-        <div className="relative w-full flex justify-center">
+        <div className={`relative ${isMobile ? 'w-full aspect-square px-3' : 'w-full'}`}>
           <img
             src="../Projects/queue.png"
             alt="The Queue App Screenshots"
-            className="w-full max-w-xs md:max-w-full lg:max-w-full mx-auto rounded-lg"
+            className={`rounded-[32px] object-cover ${isMobile ? 'w-full h-full' : 'w-full'}`}
           />
         </div>
 
         {/* Image 4 */}
-        <div className="relative w-full flex justify-center">
+        <div className={`relative ${isMobile ? 'w-full aspect-square px-3' : 'w-full'}`}>
           <img
             src="../Projects/queue.png"
             alt="The Queue App Screenshots"
-            className="w-full max-w-xs md:max-w-full lg:max-w-full mx-auto rounded-lg"
+            className={`rounded-[32px] object-cover ${isMobile ? 'w-full h-full' : 'w-full'}`}
           />
         </div>
 
@@ -480,7 +413,7 @@ const PortfolioDetails = () => {
                 </span>
               </h1>
             </div>
-            <div className="flex flex-wrap justify-between gap-8">
+            <div className={`flex flex-wrap justify-between gap-8 ${isMobile ? 'px-4' : ''}`}>
               {projects.map((project, index) => (
                 <ProjectCard
                   key={index}
