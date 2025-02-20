@@ -2,8 +2,6 @@ import BuyMeACoffee from "../../components/BuyMeACoffee";
 import CareerHeader from "../../components/CareerHeader";
 import CareerMain from "../../components/CareerMain";
 import CoolThings from "../../components/CoolThings";
-import JoinUs from "../../components/JoinUs";
-import Testimonials from "../../components/Testimonials";
 
 function Careers() {
   return (
