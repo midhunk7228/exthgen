@@ -1,7 +1,8 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { LuQuote } from "react-icons/lu";
+import vector from "../../public/Projects/Vector.png";
+
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -45,7 +46,7 @@ const TestimonialSection = () => {
     autoplaySpeed: 1500,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -71,7 +72,8 @@ const TestimonialSection = () => {
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="px-4 w-full">
               <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center mb-28 shadow-md relative w-full h-[260px]"> {/* Added h-[350px] for fixed height */}
-                <LuQuote className="rotate-180 text-6xl text-[#E1E3EE]" />
+                {/* <LuQuote className="rotate-180 text-6xl text-[#E1E3EE]" /> */}
+                <img src={vector} alt="vector" />
                 <p className="text-gray-800 text-center mb-11 mt-9">
                   {testimonial.text}
                 </p>
