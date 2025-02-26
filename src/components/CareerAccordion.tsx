@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import ApplicationDialog from './ApplicationDialog';
 
 interface AccordionItemProps {
   title: string;
@@ -58,6 +59,8 @@ const AccordionItem = ({ title, children, isOpen, onToggle }: AccordionItemProps
 const CareerAccordion = () => {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -107,9 +110,12 @@ const CareerAccordion = () => {
           We're eagerly looking forward to gaining deeper insights into your candidacy through this application.
         </p>
         <div className="mt-8 flex space-x-4 font-visby ">
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center">
-            Apply <FaArrowRightLong className="ml-2" />
-          </button>
+        <button 
+        onClick={() => setIsDialogOpen(true)}
+        className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center"
+      >
+        Apply <FaArrowRightLong className="ml-2" />
+      </button>
         </div>
       </div>
     </div>
@@ -141,6 +147,11 @@ const CareerAccordion = () => {
       >
         {uiDesignerContent}
       </AccordionItem>
+
+      <ApplicationDialog 
+      isOpen={isDialogOpen}
+      onClose={() => setIsDialogOpen(false)}
+    />
     </div>
   );
 };

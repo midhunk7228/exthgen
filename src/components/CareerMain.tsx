@@ -13,32 +13,6 @@ const CareerMain = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const projects = [
-    {
-      image: "queue.png",
-      name: "The Queue",
-      charecteristics: [
-        "Mobile Apps",
-        "Innovative Solutions",
-        "User Experience",
-      ],
-    },
-    {
-      image: "queue.png",
-      name: "Directify",
-      charecteristics: ["E-Commerce", "Web Development", "Responsive Design"],
-    },
-    {
-      image: "manifest.png",
-      name: "Money Manifest",
-      charecteristics: ["UI/UX", "Mobile App"],
-    },
-    {
-      image: "royalDrive.png",
-      name: "Royal Drive",
-      charecteristics: ["UI/UX", "Mobile App"],
-    },
-  ];
 
   return (
     <div className="bg-white py-12">

@@ -17,7 +17,7 @@ function JoinUs() {
       isMobile ? "px-4" : ""
     }`}>
     <div
-      className={`w-full  mx-auto py-16 px-6 mb-32 bg-white shadow-lg flex flex-col items-center justify-center gap-4 rounded-2xl`}
+      className={`w-full  max-w-7xl mx-auto py-16 px-6 mb-32 bg-white shadow-lg flex flex-col items-center justify-center gap-4 rounded-2xl`}
     >
       <div>
         <h1 className="flex text-center md:text-[44px] text-[26px] md:leading-[62px] leading-[34px] text-[#1E2028] font-light font-hedvig-serif">
