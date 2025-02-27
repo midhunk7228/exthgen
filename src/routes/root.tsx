@@ -7,6 +7,7 @@ import Careers from "../pages/Careers/Index";
 import Blogs from "../pages/Blogs/Index";
 import GetInTouchIndex from "../pages/GetInTouch/Index";
 import BlogsDetails from "../pages/Blogs/BlogDetails";
+import Services from "../pages/Services/Index";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
   {
     path: "careers",
     element: <Careers />,
+  },
+  {
+    path: "services",
+    element: <Services />,
   },
   {
     path: "blogs",

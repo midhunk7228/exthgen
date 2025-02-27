@@ -2,6 +2,7 @@
 import getInTouch from "../assets/getInTouch.png";
 import { BsArrowUpRight } from "react-icons/bs";
 import { useEffect, useState } from "react";
+import MenuItems from "./MenuItems";
 
 // const GetInTouch = () => {
 // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -76,11 +77,7 @@ const GetInTouch = () => {
           alt="Site Logo"
           className="w-32 h-auto mb-6"
         />
-        <img
-          src={isMobile ? "./Logo/mobile_menu.svg" : "./Logo/menu.svg"}
-          alt=""
-          className="w-20 h-auto mr-0 md:mr-16"
-        />
+        <MenuItems/>
         {/* </div> */}
       </div>
 

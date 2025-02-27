@@ -1,6 +1,7 @@
 import React from "react";
 import { useAnimation } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
+import MenuItems from "./MenuItems";
 
 const WaterDropWave = () => {
   const controls = useAnimation();
@@ -29,21 +30,13 @@ const WaterDropWave = () => {
       {/* <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div> */}
 
       <div className="relative z-20 flex flex-col h-full">
-        <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between">
+        <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between items-center">
           <img
             src="./Logo/exthgen.svg"
             alt="Site Logo"
             className="w-32 h-auto mb-6"
           />
-          <img
-            src={
-              window.innerWidth <= 768
-                ? "./Logo/mobile_menu.svg"
-                : "./Logo/menu.svg"
-            }
-            alt=""
-            className="w-20 h-auto mr-0 md:mr-16"
-          />
+          <MenuItems/>
         </div>
 
         <div className="flex flex-col justify-center items-center flex-grow text-white">
@@ -65,3 +58,180 @@ const WaterDropWave = () => {
 };
 
 export default WaterDropWave;
+
+// import { useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { FaArrowRightLong } from "react-icons/fa6";
+// import { TbMenu } from "react-icons/tb";
+// import { IoMdClose } from "react-icons/io";
+// import MenuItems from "./MenuItems";
+
+// const WaterDropWave = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
+
+//   const menuItems = [
+//     { title: "About", link: "#" },
+//     { title: "Careers", link: "#" },
+//     { title: "Services", link: "#" },
+//     { title: "Portfolio", link: "#" },
+//     { title: "Blogs", link: "#" },
+//     { title: "Contact", link: "#" },
+//   ];
+
+//   const menuVariants = {
+//     hidden: {
+//       opacity: 0,
+//       x: "100%",
+//     },
+//     visible: {
+//       opacity: 1,
+//       x: 0,
+//       transition: {
+//         duration: 0.5,
+//         ease: "easeInOut",
+//       },
+//     },
+//     exit: {
+//       opacity: 0,
+//       x: "100%",
+//       transition: {
+//         duration: 0.3,
+//         ease: "easeInOut",
+//       },
+//     },
+//   };
+
+//   const itemVariants = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: (i: number) => ({
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         delay: 0.3 + i * 0.1,
+//         duration: 0.5,
+//       },
+//     }),
+//   };
+
+//   return (
+//     <div className="relative w-full h-screen overflow-hidden bg-[#E8ECEE]">
+//       {/* Background Video */}
+//       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+//         <div className="absolute inset-0 bg-white opacity-20 z-10"></div>
+//         <video
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute top-0 left-0 w-full h-full object-cover z-0"
+//         >
+//           <source src="./ripple.mp4" type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//       </div>
+
+//       {/* Full Screen Menu Overlay */}
+//       {/* <AnimatePresence>
+//         {isMenuOpen && (
+//           <motion.div
+//             className="fixed inset-0 bg-white z-40 flex flex-col justify-center shadow-xl"
+//             variants={menuVariants}
+//             initial="hidden"
+//             animate="visible"
+//             exit="exit"
+//           >
+//             <div className="px-12 py-8 h-full flex flex-col justify-center">
+//               <nav className="flex flex-col items-end">
+//                 {menuItems.map((item, i) => (
+//                   <motion.a
+//                     key={item.title}
+//                     href={item.link}
+//                     className="text-right text-[#1E2028] text-4xl md:text-5xl font-hedvig-serif mb-8 hover:text-gray-600 transition-colors"
+//                     custom={i}
+//                     variants={itemVariants}
+//                     initial="hidden"
+//                     animate="visible"
+//                   >
+//                     {item.title}
+//                   </motion.a>
+//                 ))}
+//               </nav>
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+
+//       <div className="relative z-50 flex flex-col h-full">
+//         <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between">
+//           <img
+//             src="./Logo/exthgen.svg"
+//             alt="Site Logo"
+//             className="w-32 h-auto mb-6"
+//           />
+          
+//           <motion.div 
+//             className="h-16 w-16 rounded-full bg-white mr-0 md:mr-16 shadow-md flex items-center justify-center cursor-pointer"
+//             onClick={toggleMenu}
+//             whileTap={{ scale: 0.95 }}
+//           >
+//             <AnimatePresence mode="wait">
+//               {isMenuOpen ? (
+//                 <motion.div
+//                   key="close"
+//                   initial={{ rotate: -90, opacity: 0 }}
+//                   animate={{ rotate: 0, opacity: 1 }}
+//                   exit={{ rotate: 90, opacity: 0 }}
+//                   transition={{ duration: 0.3 }}
+//                 >
+//                   <IoMdClose className="text-3xl text-[#171718]" />
+//                 </motion.div>
+//               ) : (
+//                 <motion.div
+//                   key="menu"
+//                   initial={{ rotate: 90, opacity: 0 }}
+//                   animate={{ rotate: 0, opacity: 1 }}
+//                   exit={{ rotate: -90, opacity: 0 }}
+//                   transition={{ duration: 0.3 }}
+//                 >
+//                   <TbMenu className="text-3xl text-[#171718]" />
+//                 </motion.div>
+//               )}
+//             </AnimatePresence>
+//           </motion.div>
+//         </div> */}
+
+//       {/* Main Content */}
+
+//       <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between relative z-20">
+//         <img
+//           src="../Logo/exthgen.svg"
+//           alt="Site Logo"
+//           className="w-32 h-auto mb-6"
+//         />
+//         <MenuItems />
+//       </div>
+//       {!isMenuOpen && (
+//         <div className="flex flex-col justify-center items-center flex-grow text-white">
+//           <h1 className="flex text-center md:text-[64px] text-[30px] md:leading-[80px] leading-[38px] font-normal font-hedvig-serif text-[#1E2028]">
+//             Crafting Digital Ripples
+//             <br />
+//             for Tomorrow
+//           </h1>
+
+//           <div className="mt-8 flex space-x-4 font-visby mx-6 my-4">
+//             <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-lg font-bold leading-6 flex items-center">
+//               Think With Us <FaArrowRightLong className="ml-2" />
+//             </button>
+//           </div>
+//         </div>
+//       )}
+//       {/* </div> */}
+//     </div>
+//   );
+// };
+
+// export default WaterDropWave;

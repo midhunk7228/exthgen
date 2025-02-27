@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { ProjectCard } from "../../components/ProjectList";
 import BuyMeACoffee from "../../components/BuyMeACoffee";
+import MenuItems from "../../components/MenuItems";
 
 const PortfolioDetails = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -51,11 +52,7 @@ const PortfolioDetails = () => {
           alt="Site Logo"
           className="w-32 h-auto mb-6"
         />
-        <img
-          src={isMobile ? "../Logo/mobile_menu.svg" : "../Logo/menu.svg"}
-          alt=""
-          className="w-20 h-auto mr-0 md:mr-16"
-        />
+        <MenuItems/>
       </div>
 
       {/* Title Section */}
