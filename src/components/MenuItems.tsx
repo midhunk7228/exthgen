@@ -24,6 +24,7 @@ function MenuItems() {
   };
 
   const menuItems = [
+    { title: "Home", link: "/" },
     { title: "About", link: "/about" },
     { title: "Careers", link: "/careers" },
     { title: "Services", link: "/services" },

@@ -56,7 +56,7 @@ const PortfolioDetails = () => {
       </div>
 
       {/* Title Section */}
-      <div className="flex flex-col justify-center items-center pt-12 pb-16 md:pb-32 relative z-20">
+      <div className="flex flex-col justify-center items-center pt-12 pb-16 md:pb-32 relative ">
         <h1 className="text-center text-[30px] md:text-[64px] leading-[38px] md:leading-[80px] font-normal font-hedvig-serif">
           The Queue
         </h1>
@@ -91,7 +91,7 @@ const PortfolioDetails = () => {
       </div>
 
       {/* Description Card - Desktop View */}
-      <div className="hidden md:block relative z-20 max-w-3xl mx-auto px-4">
+      <div className="hidden md:block relative  max-w-3xl mx-auto px-4">
         <div className="overflow-hidden -mt-32 text-center px-12 py-10">
           <p className="text-2xl leading-relaxed font-light mt-2 mb-8 text-[#323442]">
             This project focused on creating an innovative mobile application

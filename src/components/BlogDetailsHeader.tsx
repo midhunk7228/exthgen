@@ -6,6 +6,7 @@ import { MdOutlineWhatsapp } from "react-icons/md";
 import { FiYoutube } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
+import MenuItems from "./MenuItems";
 
 const BlogDetailsHeader = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -61,11 +62,7 @@ const BlogDetailsHeader = () => {
           alt="Site Logo"
           className="w-32 h-auto mb-6"
         />
-        <img
-          src={isMobile ? "../Logo/mobile_menu.svg" : "../Logo/menu.svg"}
-          alt=""
-          className="w-20 h-auto mr-0 md:mr-16"
-        />
+        <MenuItems/>
       </div>
 
       <div className="flex flex-col gap-6 pb-24 pt-12 max-w-4xl mx-auto">

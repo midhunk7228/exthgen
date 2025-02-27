@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const RecentProjectPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,7 +61,7 @@ const RecentProjectPage = () => {
           <div className="grid grid-cols-1 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="flex flex-col items-center mt-16">
-                <div className={`relative ${isMobile ? 'w-full aspect-square' : 'w-full'}`}>
+                <div className={`relative ${isMobile ? 'w-full aspect-square' : 'w-full'} cursor-pointer`} onClick={() => navigate('/portfolio-details/1')}>
                   <img
                     className={`rounded-[32px] object-cover ${isMobile ? 'w-full h-full' : 'w-full'}`}
                     src={`./Projects/${project.image}`}

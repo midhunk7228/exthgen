@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import blog1 from "../assets/blog1.png";
 import blog2 from "../assets/blog2.png";
 import blog3 from "../assets/blog3.png";
+import { useNavigate } from "react-router-dom";
 
 const BlogList = () => {
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -62,7 +64,7 @@ const BlogList = () => {
         <div className="flex flex-col gap-12 pt-12 lg:max-w-[85vw] md:max-w-[98vw] sm:max-w-[85vw] mx-auto px-4 sm:px-6 lg:px-8 ">
         {blogss.map((blog:any) => (
         <div className="w-full flex justify-between items-center gap-12 sm:gap-12 md:gap-18 lg:gap-24 xl:gap-32 flex-col md:flex-row lg:flex-row ">
-            <img src={blog.image} alt="" />
+            <img src={blog.image} alt="" className="cursor-pointer" onClick={() => navigate('/blogs-details/1')}/>
             <div className="flex flex-col gap-4 justify-start items-start">
             <h1 className="text-xl sm:text-2xl md:text-xl lg:text-4xl text-start font-light text-[#1E2028] font-hedvig-serif mb-3">
             {blog.title}
