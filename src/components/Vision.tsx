@@ -4,7 +4,7 @@ import MenuItems from "./MenuItems";
 import tree from "../assets/tree-vid.mp4";
 
 const HeroSection = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {

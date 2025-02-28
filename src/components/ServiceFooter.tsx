@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
 import mobile from "../assets/mobile.png"
 import devops from "../assets/devops.png"
 import bag from "../assets/bag.png"

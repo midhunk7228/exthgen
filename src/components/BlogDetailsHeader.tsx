@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { CiFacebook } from "react-icons/ci";
 import { SlSocialTwitter } from "react-icons/sl";
 import { MdOutlineWhatsapp } from "react-icons/md";
@@ -9,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import MenuItems from "./MenuItems";
 
 const BlogDetailsHeader = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {

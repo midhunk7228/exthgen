@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 
 const ServiceHeader = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
