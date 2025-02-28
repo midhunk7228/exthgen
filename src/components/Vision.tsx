@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import MenuItems from "./MenuItems";
+import tree from "../assets/tree-vid.mp4";
 
 const HeroSection = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,20 +34,16 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between relative z-20">
+      <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between relative ">
         <img
           src="./Logo/exthgen.svg"
           alt="Site Logo"
           className="w-32 h-auto mb-6"
         />
-        <img
-          src={isMobile ? "./Logo/mobile_menu.svg" : "./Logo/menu.svg"}
-          alt=""
-          className="w-20 h-auto mr-0 md:mr-16"
-        />
+        <MenuItems />
       </div>
 
-      <div className="flex flex-col justify-center items-center pb-32 pt-12 relative z-20">
+      <div className="flex flex-col justify-center items-center pb-32 pt-12 relative ">
         <h1 className="flex text-center md:text-[64px] text-[30px] md:leading-[80px] leading-[38px] font-normal font-hedvig-serif">
           Vision Matters
         </h1>
@@ -66,11 +64,21 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-col items-center justify-center bg-white relative z-20 pb-[3.25rem]">
+      <div className="hidden md:flex flex-col items-center justify-center bg-white relative  pb-[3.25rem]">
         <div className="max-w-3xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="bg-white rounded-[36px] shadow-lg overflow-hidden -mt-20 ">
-            <div className="px-20 py-8">
-              <p className="text-lg leading-relaxed text-center font-normal mt-44">
+            <div className="px-20 py-8 flex flex-col justify-center items-center">
+              <div className="flex justify-center items-center ">
+              <video
+                src={tree}
+                className="max-w-full h-[150px] rounded-full bg-transparent"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+              </div>
+              <p className="text-lg leading-relaxed text-center font-normal">
                 We love working with small and medium businesses, helping them
                 grow with tech that just works. Our goal is to keep things
                 simple, scalable, and useful so every business, no matter how

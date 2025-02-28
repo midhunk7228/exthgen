@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { ProjectCard } from "../../components/ProjectList";
 import BuyMeACoffee from "../../components/BuyMeACoffee";
+import MenuItems from "../../components/MenuItems";
 
 const PortfolioDetails = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -51,15 +52,11 @@ const PortfolioDetails = () => {
           alt="Site Logo"
           className="w-32 h-auto mb-6"
         />
-        <img
-          src={isMobile ? "../Logo/mobile_menu.svg" : "../Logo/menu.svg"}
-          alt=""
-          className="w-20 h-auto mr-0 md:mr-16"
-        />
+        <MenuItems/>
       </div>
 
       {/* Title Section */}
-      <div className="flex flex-col justify-center items-center pt-12 pb-16 md:pb-32 relative z-20">
+      <div className="flex flex-col justify-center items-center pt-12 pb-16 md:pb-32 relative ">
         <h1 className="text-center text-[30px] md:text-[64px] leading-[38px] md:leading-[80px] font-normal font-hedvig-serif">
           The Queue
         </h1>
@@ -94,7 +91,7 @@ const PortfolioDetails = () => {
       </div>
 
       {/* Description Card - Desktop View */}
-      <div className="hidden md:block relative z-20 max-w-3xl mx-auto px-4">
+      <div className="hidden md:block relative  max-w-3xl mx-auto px-4">
         <div className="overflow-hidden -mt-32 text-center px-12 py-10">
           <p className="text-2xl leading-relaxed font-light mt-2 mb-8 text-[#323442]">
             This project focused on creating an innovative mobile application

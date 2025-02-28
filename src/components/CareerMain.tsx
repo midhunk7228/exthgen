@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CareerAccordion from "./CareerAccordion";
 
 const CareerMain = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
