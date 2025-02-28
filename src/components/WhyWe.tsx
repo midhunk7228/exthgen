@@ -3,9 +3,18 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const WhyWe = () => {
   return (
     <div className="relative flex flex-col lg:flex-row items-center justify-center bg-[#E8ECEE] py-10 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 w-full h-full z-0">
-        <img src="./wave.png" alt="Background" className="absolute inset-0 object-cover w-full h-full z-10" />
-        <div className="absolute inset-0 bg-white opacity-80 z-20"></div> {/* Red overlay */}
+      <div className="absolute inset-0 w-full h-full md:h-full z-0 overflow-hidden">
+        <div className="absolute inset-0 bg-white opacity-70 z-10"></div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
+        >
+          <source src="../ripple2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className="lg:w-1/2 w-full mb-10 lg:mb-0 lg:pr-8 relative z-30"> {/* Added z-30 to place above the image */}
         <div className="hidden lg:block"></div>

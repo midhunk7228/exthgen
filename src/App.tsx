@@ -18,7 +18,7 @@ function App() {
       <ProjectList />
       <TestimonialSection />
       <InnovationSection />
-      <BuyMeACoffee />
+      <BuyMeACoffee url="./bottom_img.jpeg"/>
     </div>
   )
 }
