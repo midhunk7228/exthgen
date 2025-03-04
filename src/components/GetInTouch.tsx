@@ -16,7 +16,7 @@ const GetInTouch = () => {
   }, []);
   return (
     <div className="flex min-h-screen bg-white">
-      <div className="absolute top-0 left-0 right-0 md:pl-20 pl-6 flex justify-between items-center px-8 py-4 bg-transparent z-10">
+      <div className="absolute top-0 left-0 right-0 md:pl-20 pl-6 flex justify-between items-center  py-4 bg-transparent z-10">
         <img
           src="./Logo/exthgen.svg"
           alt="Site Logo"

@@ -48,7 +48,7 @@ function ServiceFooter() {
         </div>
         <div className="flex flex-col justify-between items-center gap-8 sm:flex-col md:flex-row  w-full">
             {cardData.map((card, index) => (
-              <div key={index} className="px-8 py-12 shadow-lg text-center flex flex-col gap-8 justify-center items-center w-full  h-[400px] rounded-3xl">
+              <div key={index} className={`px-8 py-12 shadow-lg text-start md:text-center flex flex-col gap-8 justify-center ${isMobile ? "items-start" : "items-center"} w-full  h-[400px] rounded-3xl`}>
                 <div><img src={card.icon} alt="image" className="w-16 sm:w-16 md:w-8 lg:w-16"/></div>
                 <div><h1 className="font-medium text-2xl sm:text-2xl md:text-lg lg:text-2xl text-[#1E2028]">{card.title}</h1></div>
                 <div><p className="text-[#323442] font-extralight text-lg sm:text-lg md:text-xs lg:text-lg">{card.desc}</p></div>

@@ -7,7 +7,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import MenuItems from "./MenuItems";
 
-const BlogDetailsHeader = () => {
+const BlogDetailsHeader = ({blogDetails} : any) => {
   const [, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -66,16 +66,16 @@ const BlogDetailsHeader = () => {
 
       <div className="flex flex-col gap-6 pb-24 pt-12 max-w-4xl mx-auto">
         <div className="flex justify-center items-center flex-col font-hedvig-serif">
-          <h1 className="flex text-start md:text-[64px] text-[26px] md:leading-[84px] leading-[34px] font-light text-[#111827]">
-            How to Create a Great Website Hero Section
+          <h1 className="flex text-start md:text-[64px] text-[26px] md:leading-[84px] leading-[34px] font-light text-[#111827] px-3 md:px-3 lg:px-0">
+            {blogDetails?.blogTitle}
           </h1>
           <div className="flex flex-col  justify-center gap-4 pt-6 font-visby font-normal w-full ">
-            <p className="text-start text-[#323442] text-lg font-medium leading-7 gap-3 flex flex-col ">
-              Rick Mess | May 31, 2024
+            <p className="text-start text-[#323442] text-lg font-medium leading-7 gap-3 flex flex-col px-3 md:px-3 lg:px-0">
+              {blogDetails?.Author} | {new Date(blogDetails.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 px-3 md:px-3 lg:px-0">
           {socailMedia.map((item, index) => (
             <div
               key={index}

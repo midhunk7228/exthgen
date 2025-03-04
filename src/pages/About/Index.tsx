@@ -13,7 +13,7 @@ function About() {
       </div>
       <TeamPage />
       <WhyWe />
-      <BuyMeACoffee url="./bottom_img.jpeg"/>
+      <BuyMeACoffee url="./bottom_img.jpeg" />
     </div>
   );
 }
