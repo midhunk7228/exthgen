@@ -4,7 +4,6 @@
 // import { ProjectCard } from "../../AppComponents/PojectList";
 // import BuyMeACoffee from "../../AppComponents/BuyMeACoffee";
 
-
 // const projects = [
 //   {
 //     image: "../Projects/englebook1.png",
@@ -121,12 +120,8 @@
 
 // export default PortfolioDetails;
 
-
-
-import { useParams } from "next/navigation";
-
-const PortfolioDetails = () => {
-  const params = useParams();
+const PortFolioDetails = ({ params }: any) => {
+  // const params = useParams();
   const { id } = params; // Get the dynamic id from URL
 
   return (
@@ -136,4 +131,40 @@ const PortfolioDetails = () => {
   );
 };
 
-export default PortfolioDetails;
+export default PortFolioDetails;
+
+export function generateStaticParams() {
+  const projects = [
+    {
+      id: 1,
+      image: "queue.png",
+      name: "The Queue",
+      charecteristics: [
+        "Mobile Apps",
+        "Innovative Solutions",
+        "User Experience",
+      ],
+    },
+    {
+      id: 2,
+      image: "queue.png",
+      name: "Directify",
+      charecteristics: ["E-Commerce", "Web Development", "Responsive Design"],
+    },
+    {
+      id: 3,
+      image: "manifest.png",
+      name: "Money Manifest",
+      charecteristics: ["UI/UX", "Mobile App"],
+    },
+    {
+      id: 4,
+      image: "royalDrive.png",
+      name: "Royal Drive",
+      charecteristics: ["UI/UX", "Mobile App"],
+    },
+  ];
+  return projects.map((item) => ({
+    id: item.id.toString(),
+  }));
+}

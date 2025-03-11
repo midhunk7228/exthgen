@@ -72,7 +72,7 @@ const RecentProjectPage = () => {
             {projects.map((project, index) => (
               <div key={index} className="flex flex-col items-center mt-16">
                 <Link
-                  href={`/PortfolioDetails/${project.id}`}
+                  href={`/PortFolioDetails/${project.id}`}
                   className={`relative ${
                     isMobile ? "w-full aspect-square" : "w-full"
                   } cursor-pointer`}
