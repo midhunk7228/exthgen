@@ -8,6 +8,7 @@ interface Blog {
   blogTitle: string;
   blogDescription: string;
   Author: string;
+  blogContent: any;
   createdAt: string;
   blogCoverImage: { url: string };
 }

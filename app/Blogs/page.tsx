@@ -10,6 +10,7 @@ interface Blog {
   blogTitle: string;
   blogDescription: string;
   Author: string;
+  blogContent: any;
   createdAt: string;
   blogCoverImage: { url: string };
 }
@@ -20,7 +21,7 @@ export const revalidate = 3600; // Revalidate every hour
 async function getBlogs(): Promise<Blog[]> {
   try {
     const res = await fetch(
-      "https://api.www.exthgen.com/api/blogs?populate=*",
+      "https://api.www.exthgen.com/api/blogs/?populate=*",
       {
         next: { revalidate: 3600 }, // Better way to handle caching
       }

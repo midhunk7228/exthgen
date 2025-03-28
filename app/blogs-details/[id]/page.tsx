@@ -1,6 +1,15 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { generateEntityStaticParams } from "@/utils/staticParams";
+import { CiFacebook } from "react-icons/ci";
+import { SlSocialTwitter } from "react-icons/sl";
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { FiYoutube } from "react-icons/fi";
+import { CiLinkedin } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
+import MenuItems from "@/app/AppComponents/MenuItems";
+import RelatedBlogs from "@/app/AppComponents/RelatedBlogs";
+import BuyMeACoffee from "@/app/AppComponents/BuyMeACoffee";
 
 interface Blog {
   id: number;
@@ -8,8 +17,42 @@ interface Blog {
   blogDescription: string;
   Author: string;
   createdAt: string;
+  blogContent: any;
   blogCoverImage: { url: string };
 }
+
+const socailMedia = [
+  {
+    icon: <CiFacebook />,
+    link: "/",
+    colour: "#3B5999",
+  },
+  {
+    icon: <SlSocialTwitter />,
+    link: "/",
+    colour: "#55ACEE",
+  },
+  {
+    icon: <MdOutlineWhatsapp />,
+    link: "/",
+    colour: "#3AAF85",
+  },
+  {
+    icon: <FiYoutube />,
+    link: "/",
+    colour: "#BD081C",
+  },
+  {
+    icon: <CiLinkedin />,
+    link: "/",
+    colour: "#0077B5",
+  },
+  {
+    icon: <FaInstagram />,
+    link: "/",
+    colour: "#E4405F",
+  },
+];
 
 // Add generateStaticParams function
 export async function generateStaticParams() {
@@ -20,21 +63,20 @@ export async function generateStaticParams() {
 
 export const revalidate = 3600;
 
-async function getBlogDetail(id: string): Promise<Blog | null> {
+async function getBlogDetail(id?: string): Promise<Blog | null> {
   try {
     const res = await fetch(
-      `https://api.www.exthgen.com/api/blogs/${id}?populate=*`,
+      `https://api.www.exthgen.com/api/blogs/?populate=*`,
       {
         next: { revalidate: 3600 },
       }
     );
-
     if (!res.ok) {
       throw new Error("Failed to fetch blog");
     }
 
     const data = await res.json();
-    return data?.data || null;
+    return data?.data.filter((e: any)=> e.id == id)[0] || null;
   } catch (error) {
     console.error("Failed to fetch blog:", error);
     return null;
@@ -53,32 +95,81 @@ export default async function BlogDetail({
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <Image
-        src={`https://api.www.exthgen.com${blog.blogCoverImage.url}`}
-        alt={blog.blogTitle}
-        width={1000}
-        height={500}
-        className="w-full h-auto rounded-lg shadow-lg mb-8"
-      />
-      <div className="space-y-4">
-        <h1 className="text-3xl md:text-4xl font-hedvig-serif font-light text-[#1E2028]">
-          {blog.blogTitle}
-        </h1>
-        <div className="text-[#444444] text-sm md:text-base">
-          <span className="font-medium">{blog.Author}</span> |{" "}
-          {new Date(blog.createdAt).toLocaleDateString("en-GB", {
-            day: "2-digit",
-            month: "long",
-            year: "numeric",
-          })}
+    <div className="flex flex-col">
+      {/* Header */}
+      <div className="flex flex-col bg-white w-full relative overflow-hidden">
+      {/* Content */}
+      <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between relative z-20">
+        <img
+          src="../Logo/exthgen.svg"
+          alt="Site Logo"
+          className="w-32 h-auto mb-6"
+        />
+        <MenuItems/>
+      </div>
+
+      <div className="flex flex-col gap-6 pb-24 pt-12 max-w-4xl mx-auto">
+        <div className="flex justify-center items-center flex-col font-hedvig-serif">
+          <h1 className="flex text-start md:text-[64px] text-[26px] md:leading-[84px] leading-[34px] font-light text-[#111827] px-3 md:px-3 lg:px-0">
+            {blog?.blogTitle}
+          </h1>
+          <div className="flex flex-col  justify-center gap-4 pt-6 font-visby font-normal w-full ">
+            <p className="text-start text-[#323442] text-lg font-medium leading-7 gap-3 flex flex-col px-3 md:px-3 lg:px-0">
+              {blog?.Author} | {new Date(blog.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}
+            </p>
+          </div>
         </div>
-        <div className="prose max-w-none">
-          <p className="text-[#323442] text-base md:text-lg font-light leading-relaxed">
-            {blog.blogDescription}
-          </p>
+        <div className="flex items-center gap-4 px-3 md:px-3 lg:px-0">
+          {socailMedia.map((item, index) => (
+            <div
+              key={index}
+              className={`flex items-center jyustify-center gap-4 text-2xl cursor-pointer p-2 shadow-md rounded-full  transition-all duration-300`}
+              style={{ color: item.colour }}
+            >
+              <a href={item.link}>{item.icon}</a>
+            </div>
+          ))}
         </div>
       </div>
+    </div>
+    {/* Header */}
+
+    {/* Content */}
+    <div className="flex flex-col justify-center items-center gap-12 pb-12">
+      <div className="max-w-4xl">
+        <p className="text-[#323442] text-xl font-extralight leading-7 px-3 md:px-3 lg:px-0">
+          {blog?.blogDescription}
+        </p>
+      </div>
+      <div className="max-w-7xl">
+      <Image
+        src={`https://api.www.exthgen.com${blog?.blogCoverImage?.url}`}
+        alt={blog?.blogTitle}
+        width={800}
+        height={500}
+        className="w-[70vw] h-[15rem] md:h-[30rem] lg:h-[35rem] h-auto rounded-3xl shadow-lg mb-8"
+      />
+      </div>
+      <div className="max-w-4xl">
+        {blog?.blogContent?.map((block: any, index: number) => (
+          <p
+            key={index}
+            className="text-[#323442] text-md md:text-xl font-extralight leading-7 px-3 md:px-3 lg:px-0 my-2"
+          >
+            {block.children.map((child: any, childIndex: number) => (
+              <span key={childIndex}>{child.text}</span>
+            ))}
+          </p>
+        ))}
+      </div>
+    </div>
+    {/* Content */}
+
+   <RelatedBlogs />
+
+   <BuyMeACoffee url="../bottom_img.jpeg"/>
+
+
     </div>
   );
 }
