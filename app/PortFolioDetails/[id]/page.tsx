@@ -3,6 +3,9 @@
 // import MenuItems from "../../AppComponents/MenuItems";
 // import { ProjectCard } from "../../AppComponents/PojectList";
 // import BuyMeACoffee from "../../AppComponents/BuyMeACoffee";
+"use client"
+
+import { useEffect, useState } from "react";
 
 // const projects = [
 //   {
@@ -119,14 +122,20 @@
 // };
 
 // export default PortfolioDetails;
-
 const PortFolioDetails = ({ params }: any) => {
   // const params = useParams();
   const { id } = params; // Get the dynamic id from URL
+    const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div>
-      <h1>Portfolio Detail for ID: {id}</h1>
+      <h1>Portfolio Detail for IDss: {id}</h1>
     </div>
   );
 };

@@ -225,6 +225,7 @@ function MenuItems() {
                       href={item.link}
                       className="text-right text-[#1E2028] text-4xl md:text-5xl font-hedvig-serif mb-8 hover:text-gray-600 transition-colors"
                       onClick={toggleMenu}
+                      prefetch={false}
                     >
                       {item.title}
                     </Link>
