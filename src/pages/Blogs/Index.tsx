@@ -9,7 +9,7 @@ function Blogs() {
       <BlogHeader />
       <BlogList />
       <JoinUs />
-      <BuyMeACoffee url="./bottom_img.jpeg"/>
+      <BuyMeACoffee url="/footer-vid.mp4"/>
     </div>
   )
 }

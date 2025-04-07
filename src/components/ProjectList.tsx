@@ -1,15 +1,19 @@
+import { useEffect, useState } from "react";
 
 function ProjectList() {
+
+  
+
   const projects = [
     {
-      image: "./Projects/englebook1.png",
+      image: "./Projects/test.png",
       name: "EngleBook",
       tags: ["UI/UX", "Mobile App", "React"],
     },
     {
       image: "./Projects/englebook.png",
       name: "EngleBook",
-      tags: ["UI/UX", "Mobile App", "React"],
+      tags: ["UI/UX", "Mobile App"],
     },
     {
       image: "./Projects/the_queue.png",
@@ -27,21 +31,21 @@ function ProjectList() {
       tags: ["UI/UX", "Mobile App", "Website"],
     },
     {
-      image: "./Projects/englebook1.png",
+      image: "./Projects/test.png",
       name: "EngleBook",
       tags: ["UI/UX", "Mobile App"],
     },
   ];
 
   return (
-    <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-12">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-9">
+    <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-12 pt-40">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-12">
         Latest{" "}
         <span className="bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
           Projects
         </span>
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-y-16 lg:gap-x-7 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-16 gap-x-24 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -56,24 +60,34 @@ function ProjectList() {
 }
 
 export const ProjectCard = ({ image, name, tags }: { image: string; name: string; tags: string[] }) => {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="flex flex-col w-full max-w-full sm:max-w-md lg:max-w-lg mx-auto">
-      <div className="rounded-2xl sm:rounded-[36px] shadow-md overflow-hidden w-full aspect-video">
+    <div className="flex flex-col w-full">
+      <div className="rounded-3xl overflow-hidden w-full aspect-[3/2] md:aspect-[5/3] bg-gray-100 shadow-xl">
         <img 
           src={image} 
           alt={name} 
-          className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+          className="object-cover w-full h-full  transition-transform duration-300 hover:scale-105"
         />
       </div>
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-4 sm:mt-6 space-y-2 sm:space-y-0">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-left">
-          {name}
-        </h3>
-        <div className="flex flex-wrap justify-center sm:justify-end gap-2">
+      <div className={`flex  ${isMobile ? "flex-col" : "flex-row"} gap-2 items-center justify-between mt-5`}>
+        <h3 className="text-xl font-normal">{name}</h3>
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-white shadow-md text-gray-700 px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium"
+              className="bg-white shadow-md text-gray-700 px-4 py-3 rounded-full text-xs font-light"
             >
               {tag}
             </span>

@@ -2,7 +2,7 @@ import "react-slideshow-image/dist/styles.css";
 
 function WhatweOffer() {
   return (
-    <div className="flex flex-col justify-center bg-[#FFFFFF66] pt-20 md:pt-48 pb-10 font-hedvig-serif w-full">
+    <div className="flex flex-col justify-center bg-[#FFFFFF66] pt-20 md:pt-48  font-hedvig-serif w-full">
       <div className="flex items-center justify-center text-[#A7ACC1] gap-4 text-2xl font-normal decoration-neutral-400">
         <div className="w-20 h-px bg-gradient-to-l from-neutral-400 to-transparent ml-4"></div>
         <h1 className=" font-light">Hello!</h1>

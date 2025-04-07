@@ -4,6 +4,7 @@ import ProjectList from './components/ProjectList';
 import TestimonialSection from './components/Testimonial';
 import WaterDropWave from './components/WaterDropWave'
 import WhatweOffer from './components/WhatweOffer'
+import WhatWeOfferLogos from './components/WhatWeOfferLogos';
 
 function App() {
   
@@ -12,13 +13,14 @@ function App() {
       <WaterDropWave />
       {/* <RippleWave /> */}
       <WhatweOffer />
+      <WhatWeOfferLogos />
       {/* <div className="flex justify-center items-center w-full">
         <PartnerLogosSlider />
       </div> */}
       <ProjectList />
       <TestimonialSection />
       <InnovationSection />
-      <BuyMeACoffee url="./bottom_img.jpeg"/>
+      <BuyMeACoffee url="/footer-vid.mp4"/>
     </div>
   )
 }

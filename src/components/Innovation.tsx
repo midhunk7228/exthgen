@@ -13,8 +13,8 @@ const InnovationSection = () => {
           Our Commitment to <br />
           Excellence and Innovation
         </h1>
-        <div className="flex flex-col w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
-          <p className="text-center text-lg leading-7 gap-3 flex flex-col">
+        <div className="flex flex-col w-2/4 justify-center gap-4 pt-6 font-visby font-extralight">
+          <p className="text-center text-lg leading-7 gap-3 flex flex-col text-[#323442]">
             At Exthgen, we strive to push the boundaries of technology through
             innovative solutions. Our mission is to deliver high-quality
             services that ensure customer satisfaction and foster long-term

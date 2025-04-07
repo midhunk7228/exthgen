@@ -64,7 +64,7 @@ const TestimonialSection = () => {
 
   return (
     <div className="py-28 w-full overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+      <div className="  px-4 sm:px-6 md:px-0">
         <h2 className="text-3xl font-normal font-hedvig-serif mb-8 text-center">
           Testimonials
         </h2>
@@ -74,7 +74,7 @@ const TestimonialSection = () => {
               <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center mb-28 shadow-md relative w-full h-[260px]"> {/* Added h-[350px] for fixed height */}
                 {/* <LuQuote className="rotate-180 text-6xl text-[#E1E3EE]" /> */}
                 <img src={vector} alt="vector" />
-                <p className="text-gray-800 text-center mb-11 mt-9">
+                <p className="text-[#323442] text-center mb-11 mt-9 text-sm md:text-base font-light">
                   {testimonial.text}
                 </p>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
