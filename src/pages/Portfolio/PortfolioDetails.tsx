@@ -5,7 +5,7 @@ import BuyMeACoffee from "../../components/BuyMeACoffee";
 import MenuItems from "../../components/MenuItems";
 
 const PortfolioDetails = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
   const projects = [
     {
       image: "../Projects/englebook1.png",
@@ -40,7 +40,7 @@ const PortfolioDetails = () => {
           playsInline
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
         >
-          <source src="../ripple2.mp4" type="video/mp4" />
+          <source src="/ripple2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -196,7 +196,7 @@ const PortfolioDetails = () => {
                 </span>
               </h1>
             </div>
-            <div className={`flex flex-wrap justify-between gap-8 ${isMobile ? 'px-4' : ''}`}>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 gap-y-16 gap-x-24 max-w-7xl mx-auto ${isMobile ? 'px-4' : ''}`}>
               {projects.map((project, index) => (
                 <ProjectCard
                   key={index}
@@ -209,7 +209,7 @@ const PortfolioDetails = () => {
           </div>
         </div>
       </div>
-      <BuyMeACoffee url="../bottom_img.jpeg" />
+      <BuyMeACoffee url="../footer-vid.mp4" />
     </div>
   );
 };

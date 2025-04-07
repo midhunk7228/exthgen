@@ -27,7 +27,7 @@ function BlogsDetails() {
       <BlogDetailsHeader blogDetails = {blogDetails}/>
       <BlogDetailsContent blogDetails = {blogDetails}/>
       <RelatedBlogs />
-      <BuyMeACoffee url="../bottom_img.jpeg"/>
+      <BuyMeACoffee url="../footer-vid.mp4"/>
     </div>
   )
 }

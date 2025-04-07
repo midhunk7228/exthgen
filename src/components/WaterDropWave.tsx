@@ -36,7 +36,7 @@ const WaterDropWave = () => {
             alt="Site Logo"
             className="w-32 h-auto mb-6"
           />
-          <MenuItems/>
+          <MenuItems />
         </div>
 
         <div className="flex flex-col justify-center items-center flex-grow text-white">
@@ -47,7 +47,7 @@ const WaterDropWave = () => {
           </h1>
 
           <div className="mt-8 flex space-x-4 font-visby mx-6 my-4">
-            <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-lg font-bold leading-6 flex items-center">
+            <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full md:text-[16px] text-[16px] font-bold font-visby leading-6 flex items-center">
               Think With Us <FaArrowRightLong className="ml-2" />
             </button>
           </div>
@@ -172,8 +172,8 @@ export default WaterDropWave;
 //             alt="Site Logo"
 //             className="w-32 h-auto mb-6"
 //           />
-          
-//           <motion.div 
+
+//           <motion.div
 //             className="h-16 w-16 rounded-full bg-white mr-0 md:mr-16 shadow-md flex items-center justify-center cursor-pointer"
 //             onClick={toggleMenu}
 //             whileTap={{ scale: 0.95 }}

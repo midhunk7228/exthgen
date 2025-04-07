@@ -48,7 +48,7 @@ const HeroSection = () => {
           Vision Matters
         </h1>
 
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <p className="text-lg leading-relaxed text-center font-normal mt-4 px-4">
             We love working with small and medium businesses, helping them grow
             with tech that just works. Our goal is to keep things simple,
@@ -61,13 +61,13 @@ const HeroSection = () => {
               Free Brainstorm <FaArrowRightLong className="ml-2" />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="hidden md:flex flex-col items-center justify-center bg-white relative  pb-[3.25rem]">
+      <div className=" md:flex flex-col items-center justify-center bg-white relative  pb-[3.25rem]">
         <div className="max-w-3xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="bg-white rounded-[36px] shadow-lg overflow-hidden -mt-20 ">
-            <div className="px-20 py-8 flex flex-col justify-center items-center">
+            <div className="px-10 md:px-20 py-8 flex flex-col justify-center items-center">
               <div className="flex justify-center items-center ">
               <video
                 src={tree}
@@ -78,7 +78,7 @@ const HeroSection = () => {
                 playsInline
               />
               </div>
-              <p className="text-lg leading-relaxed text-center font-normal">
+              <p className="text-sm md:text-lg leading-relaxed text-center font-normal">
                 We love working with small and medium businesses, helping them
                 grow with tech that just works. Our goal is to keep things
                 simple, scalable, and useful so every business, no matter how
@@ -86,10 +86,10 @@ const HeroSection = () => {
                 succeed, and build something amazing.
               </p>
               <div className="mt-8 flex justify-center space-x-4 font-visby">
-                <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
+                <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center">
                   Join Us <FaArrowRightLong className="ml-2" />
                 </button>
-                <button className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-base font-bold leading-6">
+                <button className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6">
                   Contact
                 </button>
               </div>
