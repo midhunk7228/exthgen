@@ -260,7 +260,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
           </div>
         </div>
       </div>
-      <BuyMeACoffee url="../bottom_img.jpeg" />
+      <BuyMeACoffee url="../footer-vid.mp4" />
     </div>
   );
 };

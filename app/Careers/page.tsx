@@ -10,7 +10,7 @@ function Careers() {
       <CareerHeader />
       <CareerMain  />
       <CoolThings />
-      <BuyMeACoffee url="./bottom_img.jpeg"/>
+      <BuyMeACoffee url="./footer-vid.mp4"/>
     </div>
   );
 }

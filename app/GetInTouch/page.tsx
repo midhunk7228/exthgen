@@ -6,7 +6,7 @@ function GetInTouchIndex() {
   return (
     <div className="flex flex-col">
       <GetInTouch />
-      <BuyMeACoffee url="./bottom_img.jpeg"/>
+      <BuyMeACoffee url="./footer-vid.mp4"/>
     </div>
   )
 }
