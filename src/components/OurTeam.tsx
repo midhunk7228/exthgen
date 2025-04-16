@@ -3,66 +3,81 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const TeamPage = () => {
   const teamMembers = [
     {
-      image: "saleek.png",
+      image: "saleeq-statue.png",
       name: "Saleeq",
       role: "Director of everything",
     },
     {
-      image: "shaheed.png",
+      image: "shaheed-statue.png",
       name: "Shaheed",
       role: "Angel Richie",
     },
     {
-      image: "nuha.png",
-      name: "Nuha",
-      role: "Business Connector",
+      image: "rishad-statue.png",
+      name: "Rishad",
+      role: "Tech Mavrerick",
     },
     {
-      image: "shaima.png",
-      name: "Shaima",
+      image: "sana-statue.png",
+      name: "Sana",
       role: "Design and Culture Curator",
     },
     {
-      image: "arshak.png",
-      name: "Arshak",
-      role: "Logical Systems Analyst",
-    },
-    {
-      image: "midhun.png",
-      name: "Midhun",
-      role: "Code Artisan",
-    },
-    {
-      image: "dilshad.png",
+      image: "dilshad-statue.png",
       name: "Dilshad",
       role: "Cool Dev",
     },
+    {
+      image: "nabeel-statue.png",
+      name: "Nabeel",
+      role: "Design and Culture Curator",
+    },
+    // {
+    //   image: "shaima.png",
+    //   name: "Shaima",
+    //   role: "Design and Culture Curator",
+    // },
+    // {
+    //   image: "arshak.png",
+    //   name: "Arshak",
+    //   role: "Logical Systems Analyst",
+    // },
+    // {
+    //   image: "midhun.png",
+    //   name: "Midhun",
+    //   role: "Code Artisan",
+    // },
+    // {
+    //   image: "dilshad.png",
+    //   name: "Dilshad",
+    //   role: "Cool Dev",
+    // },
     
-    {
-      image: "shahadil.png",
-      name: "Shahadil",
-      role: "DevOps Architect",
-    },
-    {
-      image: "sahal.png",
-      name: "Sahal",
-      role: "Master of Analytics and Discipline",
-    },
-    {
-      image: "afeefa.png",
-      name: "Afeefa",
-      role: "App Wizard",
-    },
-    {
-      image: "rafa.png",
-      name: "Rafath",
-      role: "Search Sorcerer",
-    },
-    {
-      image: "irshad.png",
-      name: "Irshad",
-      role: "Vibe Dev",
-    },
+    // {
+    //   image: "shahadil.png",
+    //   name: "Shahadil",
+    //   role: "DevOps Architect",
+    // },
+    // {
+    //   image: "sahal.png",
+    //   name: "Sahal",
+    //   role: "Master of Analytics and Discipline",
+    // },
+    // {
+    //   image: "afeefa.png",
+    //   name: "Afeefa",
+    //   role: "App Wizard",
+    // },
+    // {
+    //   image: "rafa.png",
+    //   name: "Rafath",
+    //   role: "Search Sorcerer",
+    // },
+    // {
+    //   image: "irshad.png",
+    //   name: "Irshad",
+    //   role: "Vibe Dev",
+    // },
   ];
 
   return (
