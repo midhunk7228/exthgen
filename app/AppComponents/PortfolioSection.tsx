@@ -24,7 +24,7 @@ const PortfolioSection = () => {
         <Image
           src={logo}
           alt="Site Logo"
-          className="w-32 h-auto mb-6"
+          className="w-24 md:w-32 h-auto mb-6"
         />
         <MenuItems/>
       </div>
@@ -40,8 +40,8 @@ const PortfolioSection = () => {
         Innovative <br />
         App Solutions
         </h1>
-        <div className="flex flex-col w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
-          <p className="text-center text-[#323442] text-lg font-light leading-7 gap-3 flex flex-col">
+        <div className="flex flex-col w-full items-center px-4 md:w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
+          <p className="text-center text-[#323442] text-lg font-light leading-7 ">
           Explore our diverse portfolio showcasing cutting-edge projects <br /> that redefine technology and user experience.
           </p>
         </div>

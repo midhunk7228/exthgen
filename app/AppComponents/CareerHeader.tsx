@@ -25,7 +25,7 @@ const CareerHeader = () => {
         <Image
           src={logo}
           alt="Site Logo"
-          className="w-32 h-auto mb-6"
+          className="w-24 md:w-32 h-auto mb-6"
         />
         <MenuItems/>
       </div>
