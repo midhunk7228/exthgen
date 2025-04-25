@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 function ServicesContent() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); 
+
 
   useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+    
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+  
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -17,21 +20,21 @@ function ServicesContent() {
       id: "mobile-apps",
       title: "Mobile Apps",
       description:
-        "At Exthgen, we bring a wealth of expertise and a commitment to reliability in every project. Our tailored solutions ensure that your unique needs are met with precision and care.",
+        "We combine deep expertise with a passion for precision to craft mobile apps that truly resonate. From concept to launch, our custom solutions are designed to meet your unique needs — ensuring performance, reliability, and a seamless user experience that creates ripples in the digital world.",
       videoUrl: "/Videos/mobile-app.mp4",
     },
     {
       id: "web-apps",
       title: "Web Apps",
       description:
-        "At Exthgen, we bring a wealth of expertise and a commitment to reliability in every project. Our tailored solutions ensure that your unique needs are met with precision and care.",
+        "We build web applications that blend functionality, performance, and elegance. With a strong foundation of expertise and a commitment to reliability, we craft tailored solutions that align perfectly with your goals — delivering seamless digital experiences that leave a lasting impact.",
       videoUrl: "/Videos/web-app.mp4",
     },
     {
       id: "backend-solutions",
       title: "Backend Solutions",
       description:
-        "At Exthgen, we bring a wealth of expertise and a commitment to reliability in every project. Our tailored solutions ensure that your unique needs are met with precision and care.",
+        "We architect robust, scalable backend systems that power seamless digital experiences. With deep technical expertise and a commitment to precision, our tailored backend solutions ensure performance, security, and reliability — so your product flows smoothly from front to back, every time.",
       videoUrl: "/Videos/backend.mp4",
     },
   ];

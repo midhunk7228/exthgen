@@ -1,20 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import CareerAccordion from "./CareerAccordion";
 
 const CareerMain = () => {
-  const [, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
 
   return (
     <div className="bg-white py-12">
@@ -27,9 +15,9 @@ const CareerMain = () => {
             Openings
           </h1>
         </div>
-        <div className="flex flex-col justify-center gap-4 font-visby font-normal max-w-xl mx-auto">
+        <div className="flex flex-col justify-center gap-4 font-visby font-normal max-w-xl mx-auto pb-4">
           <p className="text-center text-[#323442] text-lg font-light leading-7 gap-3 flex flex-col">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+          Whether you're a developer, designer, strategist, or storyteller — your journey can start with a single drop.Explore open roles and become part of the ripple.
           </p>
         </div>
         <div className="">

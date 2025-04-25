@@ -1,22 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
-import logo from "../Assets/exthgen.svg"
+import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
 
 const ServiceHeader = () => {
-  const [, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className="flex flex-col bg-white w-full relative overflow-hidden">
@@ -42,14 +31,15 @@ const ServiceHeader = () => {
           </h1>
           <div className="flex flex-col w-full px-3 md:w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
             <p className="text-center text-[#323442] text-sm md:text-lg lg:text-lg font-light leading-7 gap-3 flex flex-col">
-              At Exthgen, we strive to push the boundaries of technology through
-              innovative solutions. Our mission is to deliver high-quality
-              services that ensure customer satisfaction and foster long-term
-              partnerships.{" "}
+              We don’t just deliver services — we craft experiences.
+              From custom app development and seamless UI/UX to powerful backend
+              solutions, every project we take on is a step toward meaningful
+              innovation. We push boundaries, exceed expectations, and build
+              lasting partnerships through high-quality, future-ready solutions.
             </p>
           </div>
           <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center mt-8">
-          Let’s Talk <FaArrowRightLong className="ml-2" />
+            Let’s Talk <FaArrowRightLong className="ml-2" />
           </button>
         </div>
       </div>

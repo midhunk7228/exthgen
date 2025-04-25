@@ -1,22 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 import logo from "../assets/exthgen.svg"
 import Image from "next/image";
 
 const Vision = () => {
-  const [, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className="flex flex-col bg-[#E8ECEE] w-full relative overflow-hidden">

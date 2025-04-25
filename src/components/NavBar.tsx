@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false); 
+
 
   useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+    
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
+  
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -19,7 +20,6 @@ function NavBar() {
         src="./Logo/exthgen.svg"
         alt="Site Logo"
         className={`h-auto mb-6 ${isMobile ? "w-16" : "w-32"} hover:cursor-pointer`}
-        onClick={() => navigate('/')}
       />
       <img
         src={isMobile ? "./Logo/mobile_menu.svg" : "./Logo/menu.svg"}

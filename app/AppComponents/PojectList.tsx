@@ -1,48 +1,50 @@
 import Image from "next/image";
 
-
 function ProjectList() {
-    const projects = [
-      {
-        image: "/Projects/englebook1.png",
-        name: "EngleBook",
-        tags: ["UI/UX", "Mobile App", "React"],
-      },
-      {
-        image: "/Projects/englebook.png",
-        name: "EngleBook",
-        tags: ["UI/UX", "Mobile App", "React"],
-      },
-      {
-        image: "/Projects/the_queue.png",
-        name: "The Queue",
-        tags: ["UI/UX", "Mobile App", "Flutter"],
-      },
-      {
-        image: "/Projects/money_manifest.png",
-        name: "Money Manifest",
-        tags: ["UI/UX", "Mobile App"],
-      },
-      {
-        image: "/Projects/royal_drive.png",
-        name: "Royal Drive",
-        tags: ["UI/UX", "Mobile App", "Website"],
-      },
-      {
-        image: "/Projects/englebook1.png",
-        name: "EngleBook",
-        tags: ["UI/UX", "Mobile App"],
-      },
-    ];
-  
-    return (
-      <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-12 pt-40">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-12">
-        Latest{" "}
+  const projects = [
+    {
+      image: "/Projects/englebook1.png",
+      name: "EngleBook",
+      tags: ["UI/UX", "Mobile App", "React"],
+    },
+    {
+      image: "/Projects/englebook.png",
+      name: "EngleBook",
+      tags: ["UI/UX", "Mobile App", "React"],
+    },
+    {
+      image: "/Projects/the_queue.png",
+      name: "The Queue",
+      tags: ["UI/UX", "Mobile App", "Flutter"],
+    },
+    {
+      image: "/Projects/money_manifest.png",
+      name: "Money Manifest",
+      tags: ["UI/UX", "Mobile App"],
+    },
+    {
+      image: "/Projects/royal_drive.png",
+      name: "Royal Drive",
+      tags: ["UI/UX", "Mobile App", "Website"],
+    },
+    {
+      image: "/Projects/englebook1.png",
+      name: "EngleBook",
+      tags: ["UI/UX", "Mobile App"],
+    },
+  ];
+
+  return (
+    <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-12 pt-20 md:pt-40">
+      <div className="max-w-2xl flex flex-col items-center justify-center mx-auto">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-4">
+        The Latest{" "}
         <span className="bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
-          Projects
+          Ripples
         </span>
       </h1>
+      <p className="text-xs md:text-lg text-center text-gray-500 mb-12">Where code meets craft and design speaks fluently — explore the latest wave we’ve launched into the digital sea.</p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-16 gap-x-24 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard
@@ -54,38 +56,46 @@ function ProjectList() {
         ))}
       </div>
     </div>
-    );
-  }
-  
-  export const ProjectCard = ({ image, name, tags }: { image: string; name: string; tags: string[] }) => {
-    return (
-      <div className="flex flex-col w-full max-w-full sm:max-w-md lg:max-w-lg mx-auto">
-        <div className="rounded-3xl overflow-hidden w-full aspect-[3/2] md:aspect-[5/3] bg-gray-100 shadow-xl">
-          <Image 
-            src={image} 
-            alt={name} 
-            width={0}
-            height={0}
-            className="object-cover w-full h-full  transition-transform duration-300 hover:scale-105"
-          />
-        </div>
-        <div className="flex flex-col sm:flex-row items-center justify-between mt-4 sm:mt-6 space-y-2 sm:space-y-0">
-          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-center sm:text-left">
-            {name}
-          </h3>
-          <div className="flex flex-wrap justify-center sm:justify-end gap-2">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="bg-white shadow-md text-gray-700 px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+  );
+}
+
+export const ProjectCard = ({
+  image,
+  name,
+  tags,
+}: {
+  image: string;
+  name: string;
+  tags: string[];
+}) => {
+  return (
+    <div className="flex flex-col w-full">
+      <div className="rounded-3xl overflow-hidden w-full aspect-[3/2] md:aspect-[5/3] bg-gray-100 shadow-xl">
+        <Image
+          src={image}
+          alt={name}
+          width={0}
+          height={0}
+          className="object-cover w-full h-full  transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      <div className="flex flex-col sm:flex-row items-center justify-between mt-4 sm:mt-6 space-y-2 sm:space-y-0">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-light text-center sm:text-left">
+          {name}
+        </h3>
+        <div className="flex flex-wrap justify-center sm:justify-end gap-2">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="bg-white shadow-md text-gray-700 px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
-    );
-  };
-  
-  export default ProjectList;
+    </div>
+  );
+};
+
+export default ProjectList;

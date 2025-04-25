@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ApplicationDialog from "./ApplicationDialog";
 
@@ -17,16 +17,7 @@ const AccordionItem = ({
 }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  
 
   React.useEffect(() => {
     if (contentRef.current) {
@@ -41,9 +32,7 @@ const AccordionItem = ({
         onClick={onToggle}
       >
         <span
-          className={`text-2xl font-medium text-[#1E2028] ${
-            isMobile ? "text-lg" : ""
-          }`}
+          className={` font-medium text-[#1E2028] text-lg md:text-2xl`}
         >
           {title}
         </span>
@@ -69,17 +58,7 @@ const AccordionItem = ({
 
 const CareerAccordion = () => {
   const [openSection, setOpenSection] = useState<string | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section);
@@ -97,9 +76,7 @@ const CareerAccordion = () => {
         </h3>
         <h3 className="font-medium text-lg text-[#1E2028]">What You’ll Do</h3>
         <ul
-          className={`space-y-2 pl-8 list-disc text-[#323442] font-light marker:text-gray-400 marker:text-xl ${
-            isMobile ? "text-sm" : ""
-          }`}
+          className={`space-y-2 pl-8 list-disc text-[#323442] font-light marker:text-gray-400 marker:text-xl text-sm md:text-base`}
         >
           <li>
             <span className="font-semibold">Craft Delightful Experiences:</span>{" "}
@@ -226,9 +203,7 @@ const CareerAccordion = () => {
         </h3>
         <h3 className="font-medium text-lg text-[#1E2028]">What You’ll Do</h3>
         <ul
-          className={`space-y-2 pl-8 list-disc text-[#323442] font-light marker:text-gray-400 marker:text-xl ${
-            isMobile ? "text-sm" : ""
-          }`}
+          className={`space-y-2 pl-8 list-disc text-[#323442] font-light marker:text-gray-400 marker:text-xl text-sm md:text-base`}
         >
           <li>
             <span className="font-semibold">Build Awesome Backends:</span> Write

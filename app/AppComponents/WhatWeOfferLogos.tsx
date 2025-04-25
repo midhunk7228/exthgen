@@ -23,7 +23,7 @@ const WhatWeOfferLogos = () => {
   ];
 
   return (
-    <div className="w-full bg-white py-12 px-4 flex justify-center pb-12">
+    <div className="w-full bg-white py-12 px-4 flex justify-center pb-2 md:pb-12">
       <div className="flex items-center gap-4 md:gap-10 lg:gap-20 opacity-30">
         {logos.map((logo, index) => (
           <div key={index} className="flex gap-1 md:gap-2 items-center ">

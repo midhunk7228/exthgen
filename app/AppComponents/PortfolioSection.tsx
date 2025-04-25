@@ -1,21 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import MenuItems from "./MenuItems";
 import logo from "../Assets/exthgen.svg"
 import Image from "next/image";
 
 const PortfolioSection = () => {
-  const [, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  
 
   return (
     <div className="flex flex-col bg-white w-full relative overflow-hidden">
@@ -40,9 +30,9 @@ const PortfolioSection = () => {
         Innovative <br />
         App Solutions
         </h1>
-        <div className="flex flex-col w-full items-center px-4 md:w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
+        <div className="flex flex-col w-full items-center px-4 md:w-2/4 justify-center gap-4 pt-6 font-visby font-normal">
           <p className="text-center text-[#323442] text-lg font-light leading-7 ">
-          Explore our diverse portfolio showcasing cutting-edge projects <br /> that redefine technology and user experience.
+          Dive into our portfolio and explore a collection of projects that blend creativity, technology, and purpose. From intuitive mobile apps to dynamic web platforms, each solution is crafted to spark impact and ripple across industries — redefining what’s possible through design and innovation.
           </p>
         </div>
         

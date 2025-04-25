@@ -5,20 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RecentProjectPage = () => {
-  // Initialize with false, then update in useEffect
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Set initial value after component mounts
-    setIsMobile(window.innerWidth <= 768);
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const projects = [
     {
@@ -33,7 +19,7 @@ const RecentProjectPage = () => {
     },
     {
       id: 2,
-      image: "queue.png",
+      image: "directify-2.png",
       name: "Directify",
       charecteristics: ["E-Commerce", "Web Development", "Responsive Design"],
     },
@@ -52,7 +38,7 @@ const RecentProjectPage = () => {
   ];
 
   return (
-    <div className="bg-white py-12">
+    <div className="bg-white py-1 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-3">
@@ -73,15 +59,11 @@ const RecentProjectPage = () => {
               <div key={index} className="flex flex-col items-center mt-16">
                 <Link
                   href={`/PortFolioDetails/${project.id}`}
-                  className={`relative ${
-                    isMobile ? "w-full aspect-square" : "w-full"
-                  } cursor-pointer`}
+                  className={`relative w-full aspect-square md:aspect-video cursor-pointer`}
                 >
                   <div className="relative w-full h-full">
                     <Image
-                      className={`rounded-[32px] object-cover ${
-                        isMobile ? "w-full h-full" : "w-full"
-                      }`}
+                      className={`rounded-[32px] object-cover w-full aspect-square md:aspect-video`}
                       src={`/Projects/${project.image}`}
                       alt={project.name}
                       width={0}

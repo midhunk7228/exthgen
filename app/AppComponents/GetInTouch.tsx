@@ -1,30 +1,20 @@
 "use client";
 
 import { BsArrowUpRight } from "react-icons/bs";
-import { useEffect, useState } from "react";
 import MenuItems from "./MenuItems";
 import Image from "next/image";
 import logo from "../assets/exthgen.svg"
 
 
 const GetInTouch = () => {
-  const [, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  
   return (
     <div className="flex min-h-screen bg-white">
       <div className="absolute top-0 left-0 right-0 md:pl-20 pl-6 flex justify-between items-center  py-4 bg-transparent z-10">
         <Image
           src={logo}
           alt="Site Logo"
-          className="w-32 h-auto mb-6"
+          className="w-24 md:w-32 h-auto mb-6"
         />
         <MenuItems/>
       </div>

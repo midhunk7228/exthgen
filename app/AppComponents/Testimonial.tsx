@@ -66,11 +66,12 @@ const TestimonialSection = () => {
   };
 
   return (
-    <div className="py-28 w-full overflow-hidden">
-      <div className="  px-4 sm:px-6 md:px-0">
-        <h2 className="text-3xl font-normal font-hedvig-serif mb-8 text-center">
-          Testimonials
+    <div className="py-20 md:py-28 w-full overflow-hidden">
+      <div className="px-4 sm:px-6 md:px-0">
+        <h2 className="text-3xl font-normal font-hedvig-serif mb-2 text-center">
+        Echoes of Impact
         </h2>
+        <p className="text-md md:text-lg text-center text-gray-500 mb-24">Our clients are the true waves behind every ripple we create.</p>
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="px-4 w-full">

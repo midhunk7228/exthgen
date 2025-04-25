@@ -15,10 +15,10 @@ const InnovationSection = () => {
         </h1>
         <div className="flex flex-col w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
           <p className="text-center text-lg leading-7 gap-3 flex flex-col">
-            At Exthgen, we strive to push the boundaries of technology through
-            innovative solutions. Our mission is to deliver high-quality
-            services that ensure customer satisfaction and foster long-term
-            partnerships.
+            At Exthgen, we push the boundaries of technology to craft innovative
+            solutions that exceed expectations. Our mission is to deliver
+            high-quality services that drive customer satisfaction and build
+            lasting partnerships.
           </p>
         </div>
         <div className="mt-8 flex space-x-4 font-visby">

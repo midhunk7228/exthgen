@@ -23,7 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         alt={blog.blogTitle}
         width={500}
         height={300}
-        className="cursor-pointer"
+        className="cursor-pointer rounded-3xl"
         onClick={() => router.push(`/blogs-details/${blog.id}`)}
       />
       <div className="flex flex-col gap-4 justify-start items-start">

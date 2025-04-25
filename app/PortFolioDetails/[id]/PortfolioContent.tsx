@@ -39,7 +39,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
         <Image
           src="/Logo/exthgen.svg"
           alt="Site Logo"
-          className="w-32 h-auto mb-6"
+          className="w-24 md:w-32 h-auto mb-6"
           width={128}
           height={40}
         />
@@ -54,16 +54,16 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
 
         {/* Tags */}
         <div className="flex gap-4 mt-6 font-light">
-          <span className="bg-white rounded-full px-4 py-3 shadow-md text-sm">
+          <span className="bg-white rounded-full px-4 py-2 md:py-3 shadow-md text-sm">
             Mobile App
           </span>
-          <span className="bg-white rounded-full px-4 py-3 shadow-md text-sm">
+          <span className="bg-white rounded-full px-4 py-2 md:py-3 shadow-md text-sm">
             Product
           </span>
         </div>
 
         {/* Description - Mobile View */}
-        <div className="md:hidden px-6 mt-8">
+        <div className="md:hidden px-6 mt-8 mb-8">
           <p className="text-center font-light leading-relaxed">
             This project focused on creating an innovative mobile application
             designed to help users learn English effectively and efficiently.
@@ -110,7 +110,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
             src="../Projects/queue.png"
             alt="The Queue App Screenshots"
             className={`rounded-[32px] object-cover ${
-              isMobile ? "w-full h-full" : "w-full"
+              isMobile ? "w-full aspect-square" : "w-full"
             }`}
             width={0}
             height={0}
@@ -165,10 +165,10 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
           }`}
         >
           <Image
-            src="../Projects/queue.png"
+            src="../Projects/queue2.png"
             alt="The Queue App Screenshots"
             className={`rounded-[32px] object-cover ${
-              isMobile ? "w-full h-full" : "w-full"
+              isMobile ? "w-full aspect-square" : "w-full"
             }`}
             width={0}
             height={0}
@@ -198,10 +198,10 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
           }`}
         >
           <Image
-            src="../Projects/queue.png"
+            src="../Projects/queue3.png"
             alt="The Queue App Screenshots"
             className={`rounded-[32px] object-cover ${
-              isMobile ? "w-full h-full" : "w-full"
+              isMobile ? "w-full aspect-square" : "w-full"
             }`}
             width={0}
             height={0}
@@ -216,10 +216,10 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
           }`}
         >
           <Image
-            src="../Projects/queue.png"
+            src="../Projects/queue4.png"
             alt="The Queue App Screenshots"
             className={`rounded-[32px] object-cover ${
-              isMobile ? "w-full h-full" : "w-full"
+              isMobile ? "w-full aspect-square" : "w-full"
             }`}
             width={0}
             height={0}
@@ -244,7 +244,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
               </h1>
             </div>
             <div
-              className={`flex flex-wrap justify-between gap-8 ${
+              className={`flex flex-col md:flex-row justify-between gap-8 ${
                 isMobile ? "px-4" : ""
               }`}
             >

@@ -1,19 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 function ServiceFooter() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const cardData= [
     {
@@ -33,7 +22,7 @@ function ServiceFooter() {
     },
   ]
   return (
-    <div className={`${isMobile ? "px-4 py-8" : "px-14 py-16"}`}>
+    <div className={`px-4 py-8 md:px-14 md:py-16`}>
       <div
         className={`w-full flex flex-col items-center justify-center gap-8 `}
       >
@@ -48,7 +37,7 @@ function ServiceFooter() {
         </div>
         <div className="flex flex-col justify-between items-center gap-8 sm:flex-col md:flex-row  w-full">
             {cardData.map((card, index) => (
-              <div key={index} className={`px-8 py-12 shadow-lg text-start md:text-center flex flex-col gap-8 justify-center ${isMobile ? "items-start" : "items-center"} w-full  h-[400px] rounded-3xl`}>
+              <div key={index} className={`px-8 py-12 shadow-lg text-start md:text-center flex flex-col gap-8 justify-center items-start md:items-center w-full  h-[400px] rounded-3xl`}>
                 <div><Image src={card.icon} width={0} height={0} alt="image" className="w-16 sm:w-16 md:w-8 lg:w-16"/></div>
                 <div><h1 className="font-medium text-2xl sm:text-2xl md:text-lg lg:text-2xl text-[#1E2028]">{card.title}</h1></div>
                 <div><p className="text-[#323442] font-extralight text-lg sm:text-lg md:text-xs lg:text-lg">{card.desc}</p></div>
