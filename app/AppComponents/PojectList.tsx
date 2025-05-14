@@ -37,13 +37,16 @@ function ProjectList() {
   return (
     <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-12 pt-20 md:pt-40">
       <div className="max-w-2xl flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-4">
-        The Latest{" "}
-        <span className="bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
-          Ripples
-        </span>
-      </h1>
-      <p className="text-xs md:text-lg text-center text-gray-500 mb-12">Where code meets craft and design speaks fluently — explore the latest wave we’ve launched into the digital sea.</p>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-4">
+          The Latest{" "}
+          <span className="bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
+            Ripples
+          </span>
+        </h1>
+        <p className="text-xs md:text-lg text-center text-gray-500 mb-12">
+          Where code meets craft and design speaks fluently — explore the latest
+          wave we’ve launched into the digital sea.
+        </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-16 gap-x-24 max-w-7xl mx-auto">
         {projects.map((project, index) => (
@@ -84,7 +87,7 @@ export const ProjectCard = ({
           {name}
         </h3>
         <div className="flex flex-wrap justify-center sm:justify-end gap-2">
-          {tags.map((tag, index) => (
+          {Object.values(tags).map((tag, index) => (
             <span
               key={index}
               className="bg-white shadow-md text-gray-700 px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium"
