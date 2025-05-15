@@ -1,62 +1,3 @@
-// import PortfolioContent from "./PortfolioContent";
-
-// const projects = [
-//   {
-//     image: "../Projects/englebook1.png",
-//     name: "EngleBook",
-//     tags: ["UI/UX", "Mobile App", "React"],
-//   },
-//   {
-//     image: "../Projects/englebook.png",
-//     name: "EngleBook",
-//     tags: ["UI/UX", "Mobile App", "React"],
-//   },
-// ];
-
-// export function generateStaticParams() {
-//   const projects = [
-//     {
-//       id: 1,
-//       image: "queue.png",
-//       name: "The Queue",
-//       charecteristics: [
-//         "Mobile Apps",
-//         "Innovative Solutions",
-//         "User Experience",
-//       ],
-//     },
-//     {
-//       id: 2,
-//       image: "queue.png",
-//       name: "Directify",
-//       charecteristics: ["E-Commerce", "Web Development", "Responsive Design"],
-//     },
-//     {
-//       id: 3,
-//       image: "manifest.png",
-//       name: "Money Manifest",
-//       charecteristics: ["UI/UX", "Mobile App"],
-//     },
-//     {
-//       id: 4,
-//       image: "royalDrive.png",
-//       name: "Royal Drive",
-//       charecteristics: ["UI/UX", "Mobile App"],
-//     },
-//   ];
-//   return projects.map((item) => ({
-//     id: item.id.toString(),
-//   }));
-// }
-
-// const PortfolioDetails = () => {
-//   return <PortfolioContent projects={projects} />;
-// };
-
-// export default PortfolioDetails;
-
-
-
 import { notFound } from "next/navigation";
 import PortfolioContent from "./PortfolioContent";
 
@@ -164,15 +105,16 @@ export default async function PortfolioDetails({
 
   // Format related projects for the PortfolioContent component
   const formattedRelatedProjects = relatedProjects
-    .filter((project: any) => project.id != params.id) // Exclude current project
-    .map((project: any) => ({
-      image: project.portfolioCoverImage 
-        ? `http://localhost:1337${project.portfolioCoverImage.url}`
-        : "/placeholder.jpg",
-      name: project.portfolioTitle,
-      tags: project.portfolioFeatures || [],
-      id: project.id
-    }));
+  .filter((project: any) => project.id != params.id) // Exclude current project
+  .map((project: any) => ({
+    image: project.portfolioCoverImage 
+      ? project.portfolioCoverImage
+      : "/placeholder.jpg",
+    name: project.portfolioTitle,
+    tags: project.portfolioFeatures || [],
+    id: project.id
+  }))
+  .slice(0, 2); // Limit to only 2 projects
 
 
   return (

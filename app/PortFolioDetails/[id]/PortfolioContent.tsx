@@ -28,7 +28,7 @@ interface Portfolio {
 }
 
 interface Project {
-  image: string;
+  image: { url: string; name: string };
   name: string;
   tags: string[];
   id: number;
@@ -44,6 +44,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
   currentPortfolio,
 }) => {
   const isMobile = useResponsive();
+  console.log(projects,"kll")
 
   // Format the date
   const formattedDate = new Date(currentPortfolio.createdAt).toLocaleDateString(
@@ -306,7 +307,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
                     image={project.image}
                     name={project.name}
                     tags={project.tags}
-                    // id={project.id}
+                    id={project.id}
                   />
                 ))}
               </div>
