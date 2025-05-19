@@ -175,7 +175,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
           }`}
         >
           <Image
-            src={`http://localhost:1337${currentPortfolio.portfolioCoverImage.url}`}
+            src={`https://api.www.exthgen.com${currentPortfolio.portfolioCoverImage.url}`}
             alt={currentPortfolio.portfolioCoverImage.name}
             className={`rounded-[32px] object-cover ${
               isMobile ? "w-full aspect-square" : "w-full"
@@ -240,7 +240,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
           }`}
         >
           <Image
-            src={`http://localhost:1337${currentPortfolio.portfolioImages[0].url}`}
+            src={`https://api.www.exthgen.com${currentPortfolio.portfolioImages[0].url}`}
             alt={currentPortfolio.portfolioImages[0].name}
             className={`rounded-[32px] object-cover ${
               isMobile ? "w-full aspect-square" : "w-full"
@@ -267,7 +267,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
             }`}
           >
               <Image
-                src={`http://localhost:1337${image.url}`}
+                src={`https://api.www.exthgen.com${image.url}`}
                 alt={image.name}
                 className={`rounded-[32px] object-cover ${
                   isMobile ? "w-full aspect-square" : "w-full"

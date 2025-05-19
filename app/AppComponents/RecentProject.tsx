@@ -125,7 +125,7 @@ const RecentProjectPage = () => {
       try {
         setIsLoading(true);
         const res = await fetch(
-          "http://localhost:1337/api/portfolios/?populate=*",
+          "https://api.www.exthgen.com/api/portfolios/?populate=*",
           {
             cache: "no-store",
           }
@@ -192,7 +192,7 @@ const RecentProjectPage = () => {
                         className={`rounded-[32px] object-cover w-full aspect-square md:aspect-video`}
                         src={
                           project.portfolioCoverImage
-                            ? `http://localhost:1337${project.portfolioCoverImage.url}`
+                            ? `https://api.www.exthgen.com${project.portfolioCoverImage.url}`
                             : "/placeholder.jpg"
                         }
                         alt={project.portfolioCoverImage.name}

@@ -23,7 +23,7 @@
 //       try {
 //         setIsLoading(true);
 //         const res = await fetch(
-//           "http://localhost:1337/api/portfolios/?populate=*",
+//           "https://api.www.exthgen.com/api/portfolios/?populate=*",
 //           {
 //             cache: "no-store",
 //           }
@@ -93,7 +93,7 @@
 //     <div className="flex flex-col w-full">
 //       <div className="rounded-3xl overflow-hidden w-full aspect-[3/2] md:aspect-[5/3] bg-gray-100 shadow-xl" onClick={() => router.push(`/PortFolioDetails/${id}`)}>
 //         <Image
-//           src={`http://localhost:1337${image?.url}`}
+//           src={`https://api.www.exthgen.com${image?.url}`}
 //           alt={name}
 //           width={0}
 //           height={0}
@@ -147,7 +147,7 @@ function ProjectList() {
       try {
         setIsLoading(true);
         const res = await fetch(
-          "http://localhost:1337/api/portfolios/?populate=*",
+          "https://api.www.exthgen.com/api/portfolios/?populate=*",
           {
             cache: "no-store",
           }
@@ -230,7 +230,7 @@ export const ProjectCard = ({
     }
 
     // Ensure the URL doesn't have double slashes
-    const baseUrl = "http://localhost:1337";
+    const baseUrl = "https://api.www.exthgen.com";
     const imageUrl = image.url.startsWith("/") ? image.url : `/${image.url}`;
     return `${baseUrl}${imageUrl}`;
   };

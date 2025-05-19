@@ -26,7 +26,7 @@ export async function generateStaticParams() {
   try {
     // Fetch all portfolios to get their IDs
     const res = await fetch(
-      "http://localhost:1337/api/portfolios/?populate=*",
+      "https://api.www.exthgen.com/api/portfolios/?populate=*",
       {
         next: { revalidate: 0 },
       }
@@ -53,7 +53,7 @@ export const revalidate = 3600;
 async function getPortfolioDetail(id?: string): Promise<Portfolio | null> {
   try {
     const res = await fetch(
-      `http://localhost:1337/api/portfolios/?populate=*`,
+      `https://api.www.exthgen.com/api/portfolios/?populate=*`,
       {
         next: { revalidate: 3600 },
       }
@@ -74,7 +74,7 @@ async function getPortfolioDetail(id?: string): Promise<Portfolio | null> {
 async function getRelatedProjects() {
   try {
     const res = await fetch(
-      "http://localhost:1337/api/portfolios/?populate=*",
+      "https://api.www.exthgen.com/api/portfolios/?populate=*",
       {
         next: { revalidate: 3600 },
       }
