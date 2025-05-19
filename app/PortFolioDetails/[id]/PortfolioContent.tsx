@@ -7,12 +7,54 @@ import BuyMeACoffee from "../../AppComponents/BuyMeACoffee";
 import Image from "next/image";
 import Link from "next/link";
 
-interface PortfolioContentProps {
-  projects: any[]; // Add proper typing based on your project structure
+// Define the Portfolio and Project interfaces
+interface Portfolio {
+  id: number;
+  portfolioTitle: string;
+  portfolioDescription: string;
+  detailDescription: string;
+  portfolioContent: any;
+  createdAt: string;
+  portfolioCoverImage: { url: string; name: string };
+  portfolioFeatures: string[];
+  portfolioImages: { url: string; name: string; id: number }[];
+  projectDuration: string;
+  projectImpact: string;
+  projectClient: string;
+  projectType: string;
+  duration: string;
+  impact: string;
+  url: string;
 }
 
-const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
+interface Project {
+  image: { url: string; name: string };
+  name: string;
+  tags: string[];
+  id: number;
+}
+
+interface PortfolioContentProps {
+  projects: Project[];
+  currentPortfolio: Portfolio;
+}
+
+const PortfolioContent: React.FC<PortfolioContentProps> = ({
+  projects,
+  currentPortfolio,
+}) => {
   const isMobile = useResponsive();
+  console.log(projects,"kll")
+
+  // Format the date
+  const formattedDate = new Date(currentPortfolio.createdAt).toLocaleDateString(
+    "en-GB",
+    {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    }
+  );
 
   return (
     <div className="flex flex-col bg-white w-full relative overflow-hidden">
@@ -46,68 +88,95 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
       </div>
 
       {/* Title Section */}
-      <div className="flex flex-col justify-center items-center pt-12 pb-16 md:pb-32 relative ">
+      <div className="flex flex-col justify-center items-center pt-12 pb-16 md:pb-32 relative">
         <h1 className="text-center text-[30px] md:text-[64px] leading-[38px] md:leading-[80px] font-normal font-hedvig-serif">
-          The Queue
+          {currentPortfolio.portfolioTitle}
         </h1>
 
         {/* Tags */}
-        <div className="flex gap-4 mt-6 font-light">
-          <span className="bg-white rounded-full px-4 py-2 md:py-3 shadow-md text-sm">
-            Mobile App
-          </span>
-          <span className="bg-white rounded-full px-4 py-2 md:py-3 shadow-md text-sm">
-            Product
-          </span>
+        <div className="flex gap-4 mt-6 font-light flex-wrap justify-center">
+          {(
+            Object.values(currentPortfolio?.portfolioFeatures || {}) as string[]
+          ).map((feature, idx) => (
+            <div
+              key={idx}
+              className="text-xs font-light bg-white px-3 py-2 shadow-xl rounded-full"
+            >
+              <p>{feature}</p>
+            </div>
+          ))}
         </div>
 
         {/* Description - Mobile View */}
         <div className="md:hidden px-6 mt-8 mb-8">
           <p className="text-center font-light leading-relaxed">
-            This project focused on creating an innovative mobile application
-            designed to help users learn English effectively and efficiently.
+            {currentPortfolio.portfolioDescription}
           </p>
         </div>
 
         {/* Buttons - Mobile View */}
         <div className="md:hidden flex items-center justify-center space-x-4 font-visby">
+          {/* {currentPortfolio.url && (
+            <Link
+              href={currentPortfolio.url}
+              target="_blank"
+              className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center"
+            >
+              Checkout <FaArrowRightLong className="ml-2" />
+            </Link>
+          )} */}
           <button className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
             Checkout <FaArrowRightLong className="ml-2" />
           </button>
-          <button className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
+          <Link
+            href="/contact"
+            className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center"
+          >
             Contact
-          </button>
+          </Link>
         </div>
       </div>
 
       {/* Description Card - Desktop View */}
-      <div className="hidden md:block relative  max-w-3xl mx-auto px-4">
+      <div className="hidden md:block relative max-w-3xl mx-auto px-4">
         <div className="overflow-hidden -mt-32 text-center px-12 py-10">
           <p className="text-2xl leading-relaxed font-light mt-2 mb-8 text-[#323442]">
-            This project focused on creating an innovative mobile application
-            designed to help users learn English effectively and efficiently.
+            {currentPortfolio.portfolioDescription}
           </p>
           <div className="flex items-center justify-center space-x-4 font-visby">
+            {/* {currentPortfolio.url && (
+              <Link
+                href={currentPortfolio.url}
+                target="_blank"
+                className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center"
+              >
+                Checkout <FaArrowRightLong className="ml-2" />
+              </Link>
+            )} */}
             <button className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
               Checkout <FaArrowRightLong className="ml-2" />
             </button>
-            <button className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
+            <Link
+              href="/contact"
+              className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center"
+            >
               Contact
-            </button>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* App Image Section */}
       <div className="relative mt-6 md:mt-18 pb-0 flex flex-col max-w-7xl mx-auto gap-[100px] pb-16">
+        {/* Main Portfolio Image */}
         <div
-          className={`relative ${
+          className={`relative mt-0 ${
             isMobile ? "w-full aspect-square px-3" : "w-full"
           }`}
         >
           <Image
-            src="../Projects/queue.png"
-            alt="The Queue App Screenshots"
+            src={`https://api.www.exthgen.com${currentPortfolio.portfolioCoverImage.url}`}
+            alt={currentPortfolio.portfolioCoverImage.name}
             className={`rounded-[32px] object-cover ${
               isMobile ? "w-full aspect-square" : "w-full"
             }`}
@@ -126,46 +195,53 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
           <div
             className={`flex flex-col items-center justify-center ${
               isMobile ? "gap-0" : "gap-3"
-            } `}
+            }`}
           >
             <h4 className="text-black text-lg md:text-xl">Project</h4>
-            <p className="text-black text-sm font-light">E-commerce App</p>
+            <p className="text-black text-sm font-light">
+              {currentPortfolio.projectType}
+            </p>
           </div>
           <div
             className={`flex flex-col items-center justify-center ${
               isMobile ? "gap-0" : "gap-3"
-            } `}
+            }`}
           >
             <h4 className="text-black text-lg md:text-xl">Client</h4>
-            <p className="text-black text-sm font-light">Retail Brand</p>
+            <p className="text-black text-sm font-light">
+              {currentPortfolio.projectClient || "Client Name"}
+            </p>
           </div>
           <div
             className={`flex flex-col items-center justify-center ${
               isMobile ? "gap-0" : "gap-3"
-            } `}
+            }`}
           >
             <h4 className="text-black text-lg md:text-xl">Duration</h4>
-            <p className="text-black text-sm font-light">6 Months</p>
+            <p className="text-black text-sm font-light">
+              {currentPortfolio.projectDuration || "Project Duration"}
+            </p>
           </div>
           <div
             className={`flex flex-col items-center justify-center ${
               isMobile ? "gap-0" : "gap-3"
-            } `}
+            }`}
           >
             <h4 className="text-black text-lg md:text-xl">Impact</h4>
-            <p className="text-black text-sm font-light">Increased Sales</p>
+            <p className="text-black text-sm font-light">
+              {currentPortfolio.projectImpact || "Project Impact"}
+            </p>
           </div>
         </div>
 
-        {/* Image 2 */}
         <div
           className={`relative ${
             isMobile ? "w-full aspect-square px-3" : "w-full"
           }`}
         >
           <Image
-            src="../Projects/queue2.png"
-            alt="The Queue App Screenshots"
+            src={`https://api.www.exthgen.com${currentPortfolio.portfolioImages[0].url}`}
+            alt={currentPortfolio.portfolioImages[0].name}
             className={`rounded-[32px] object-cover ${
               isMobile ? "w-full aspect-square" : "w-full"
             }`}
@@ -179,85 +255,65 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ projects }) => {
         <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
           <div className="w-full md:w-[50%]"></div>
           <div className="w-full md:w-[50%] font-light text-lg md:text-2xl text-[#1E2028] px-4 md:px-0">
-            <p>
-              We love working with small and medium businesses, helping them
-              grow with tech that just works. Our goal is to keep things simple,
-              scalable, and useful so every business, no matter how small, can
-              reach its full potential.
-            </p>
-            <br />
-            <p>Together, let’s grow, succeed, and build something amazing.</p>
+            <p>{currentPortfolio.detailDescription || "Project Description"}</p>
           </div>
         </div>
 
-        {/* Image 3 */}
-        <div
-          className={`relative ${
-            isMobile ? "w-full aspect-square px-3" : "w-full"
-          }`}
-        >
-          <Image
-            src="../Projects/queue3.png"
-            alt="The Queue App Screenshots"
-            className={`rounded-[32px] object-cover ${
-              isMobile ? "w-full aspect-square" : "w-full"
+        {currentPortfolio?.portfolioImages.slice(1).map((image, index) => (
+          <div
+            key={index}
+            className={`relative ${
+              isMobile ? "w-full aspect-square px-3" : "w-full"
             }`}
-            width={0}
-            height={0}
-            layout="responsive"
-          />
-        </div>
-
-        {/* Image 4 */}
-        <div
-          className={`relative ${
-            isMobile ? "w-full aspect-square px-3" : "w-full"
-          }`}
-        >
-          <Image
-            src="../Projects/queue4.png"
-            alt="The Queue App Screenshots"
-            className={`rounded-[32px] object-cover ${
-              isMobile ? "w-full aspect-square" : "w-full"
-            }`}
-            width={0}
-            height={0}
-            layout="responsive"
-          />
-        </div>
+          >
+              <Image
+                src={`https://api.www.exthgen.com${image.url}`}
+                alt={image.name}
+                className={`rounded-[32px] object-cover ${
+                  isMobile ? "w-full aspect-square" : "w-full"
+                }`}
+                width={0}
+                height={0}
+                layout="responsive"
+              />
+          </div>
+        ))}
 
         {/* Latest Projects */}
-        <div>
-          <div className="flex items-center justify-center pb-4 text-[#A7ACC1] gap-4 text-2xl font-normal decoration-neutral-400">
-            <div className="w-20 h-px bg-gradient-to-l from-neutral-400 to-transparent ml-4"></div>
-            <h1 className=" font-light">See Also</h1>
-            <div className="w-20 h-px bg-gradient-to-r from-neutral-400 to-transparent mr-4"></div>
-          </div>
+        {projects && projects.length > 0 && (
           <div>
-            <div className="text-center pb-4">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-3">
-                Latest{" "}
-                <span className="bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
-                  Projects
-                </span>
-              </h1>
+            <div className="flex items-center justify-center pb-4 text-[#A7ACC1] gap-4 text-2xl font-normal decoration-neutral-400">
+              <div className="w-20 h-px bg-gradient-to-l from-neutral-400 to-transparent ml-4"></div>
+              <h1 className="font-light">See Also</h1>
+              <div className="w-20 h-px bg-gradient-to-r from-neutral-400 to-transparent mr-4"></div>
             </div>
-            <div
-              className={`flex flex-col md:flex-row justify-between gap-8 ${
-                isMobile ? "px-4" : ""
-              }`}
-            >
-              {projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  image={project.image}
-                  name={project.name}
-                  tags={project.tags}
-                />
-              ))}
+            <div>
+              <div className="text-center pb-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-light font-hedvig-serif mb-3">
+                  Latest{" "}
+                  <span className="bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
+                    Projects
+                  </span>
+                </h1>
+              </div>
+              <div
+                className={`flex flex-col md:flex-row justify-between gap-8 ${
+                  isMobile ? "px-4" : ""
+                }`}
+              >
+                {projects.map((project, index) => (
+                  <ProjectCard
+                    key={index}
+                    image={project.image}
+                    name={project.name}
+                    tags={project.tags}
+                    id={project.id}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
       <BuyMeACoffee url="../footer-vid.mp4" />
     </div>
