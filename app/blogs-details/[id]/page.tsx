@@ -114,6 +114,8 @@ export default async function BlogDetail({
     notFound();
   }
 
+  console.log(blog,"dilsh")
+
 
   return (
     <div className="flex flex-col">
