@@ -114,7 +114,6 @@ export default async function BlogDetail({
     notFound();
   }
 
-  console.log(blog,"dilsh")
 
 
   return (
