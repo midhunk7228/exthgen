@@ -59,7 +59,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
   return (
     <div className="flex flex-col bg-white w-full relative overflow-hidden">
       {/* Background Video with Light Overlay */}
-      <div className="absolute inset-0 w-full h-[80vh] md:h-[70vh] z-0 overflow-hidden">
+      <div className="absolute inset-0 w-full h-[100vh] z-0 overflow-hidden">
         <div className="absolute inset-0 bg-white opacity-70 z-10"></div>
         <video
           autoPlay
@@ -167,7 +167,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
       </div>
 
       {/* App Image Section */}
-      <div className="relative mt-6 md:mt-18 pb-0 flex flex-col max-w-7xl mx-auto gap-[100px] pb-16">
+      <div className="relative mt-6 md:mt-18 pb-0 flex flex-col  md:px-20 lg:px-40 mx-auto gap-[100px] pb-16">
         {/* Main Portfolio Image */}
         <div
           className={`relative mt-0 ${
