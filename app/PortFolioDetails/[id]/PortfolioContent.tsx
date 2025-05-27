@@ -153,11 +153,11 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
                 Checkout <FaArrowRightLong className="ml-2" />
               </Link>
             )} */}
-            <button className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
+            <Link href="/GetInTouch" className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
               Checkout <FaArrowRightLong className="ml-2" />
-            </button>
+            </Link>
             <Link
-              href="/contact"
+              href="/GetInTouch"
               className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center"
             >
               Contact

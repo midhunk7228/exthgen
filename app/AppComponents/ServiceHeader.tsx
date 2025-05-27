@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServiceHeader = () => {
 
@@ -15,6 +16,8 @@ const ServiceHeader = () => {
           src={logo}
           alt="Site Logo"
           className="w-24 md:w-32 h-auto mb-6"
+          height={0}
+          width={0}
         />
         <MenuItems />
       </div>
@@ -38,9 +41,9 @@ const ServiceHeader = () => {
               lasting partnerships through high-quality, future-ready solutions.
             </p>
           </div>
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center mt-8">
+          <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center mt-8">
             Let’s Talk <FaArrowRightLong className="ml-2" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

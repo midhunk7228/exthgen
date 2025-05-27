@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhyWe = () => {
@@ -34,12 +35,12 @@ const WhyWe = () => {
               your unique needs are met with precision and care.
             </p>
             <div className="flex flex-row items-center justify-start gap-4 font-visby">
-              <button className="bg-exthgen-gradient text-white py-2 md:py-3 px-4 md:px-6 hover:bg-pink-600 rounded-full text-sm md:text-base font-bold leading-6 flex items-center">
+              <Link href={"/Careers"} className="bg-exthgen-gradient text-white py-2 md:py-3 px-4 md:px-6 hover:bg-pink-600 rounded-full text-sm md:text-base font-bold leading-6 flex items-center">
                 Join Us <FaArrowRightLong className="ml-2" />
-              </button>
-              <button className="bg-white text-gray-800 py-2 md:py-3 px-4 md:px-6 border border-[#1E2028] hover:bg-gray-100 rounded-full text-sm md:text-base font-bold leading-6">
+              </Link>
+              <Link href={"/GetInTouch"} className="bg-white text-gray-800 py-2 md:py-3 px-4 md:px-6 border border-[#1E2028] hover:bg-gray-100 rounded-full text-sm md:text-base font-bold leading-6">
                 Contact
-              </button>
+              </Link>
             </div>
           </div>
         </div>

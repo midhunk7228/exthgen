@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import {
@@ -97,9 +98,9 @@ function BuyMeACoffee({ url }: any) {
           </p>
         </div>
         <div className="mt-8 flex space-x-4 font-visby md:pt-16 pt-4">
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center">
+          <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center">
             Free Brainstorm <FaArrowRightLong className="ml-2" />
-          </button>
+          </Link>
         </div>
       </div>
       <div className="relative z-20 flex w-full justify-between md:px-20 px-6 pb-12 pt-28">

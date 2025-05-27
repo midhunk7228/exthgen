@@ -13,6 +13,8 @@ const BlogHeader = () => {
           src={logo}
           alt="Site Logo"
           className="w-24 md:w-32 h-auto mb-6"
+          height={0}
+          width={0}
         />
         <MenuItems/>
       </div>

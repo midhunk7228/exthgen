@@ -6,6 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 import logo from "../assets/exthgen.svg"
 import Image from "next/image";
+import Link from "next/link";
 
 
 const WaterDropWave = () => {
@@ -40,6 +41,8 @@ const WaterDropWave = () => {
             src={logo}
             alt="Site Logo"
             className="w-24 md:w-32 h-auto mb-6"
+            height={0}
+            width={0}
           />
           <MenuItems />
         </div>
@@ -52,9 +55,9 @@ const WaterDropWave = () => {
           </h1>
 
           <div className="mt-8 flex space-x-4 font-visby mx-6 my-4">
-            <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-lg font-bold leading-6 flex items-center">
+            <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-lg font-bold leading-6 flex items-center">
               Think With Us <FaArrowRightLong className="ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

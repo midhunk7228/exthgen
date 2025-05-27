@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function CoolThings() {
@@ -30,9 +31,9 @@ function CoolThings() {
             </p>
           </div>
           <div className="mt-8 flex space-x-4 font-visby ">
-            <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center">
+            <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center">
               Apply <FaArrowRightLong className="ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -60,12 +61,12 @@ function CoolThings() {
           </p>
         </div>
         <div className="mt-8 flex space-x-4 font-visby ">
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center">
+          <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center">
             Join Us <FaArrowRightLong className="ml-2" />
-          </button>
-          <button className="bg-transparent text-black py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center border border-[#1E2028]">
+          </Link>
+          <Link href={"/GetInTouch"} className="bg-transparent text-black py-3 px-6  rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center border border-[#1E2028]">
             Contact
-          </button>
+          </Link>
         </div>
       </div>
     </div>

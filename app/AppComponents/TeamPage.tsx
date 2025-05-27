@@ -107,6 +107,7 @@
 // export default TeamPage;
 
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -240,9 +241,9 @@ export default async function TeamPage() {
         </div>
 
         <div className="mt-20 mb-24 flex space-x-4 font-visby justify-center">
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
+          <Link href={"/Careers"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
             Join The Team <FaArrowRightLong className="ml-2" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

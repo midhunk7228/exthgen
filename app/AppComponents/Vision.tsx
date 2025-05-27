@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 import logo from "../assets/exthgen.svg"
 import Image from "next/image";
+import Link from "next/link";
 
 const Vision = () => {
 
@@ -31,6 +32,8 @@ const Vision = () => {
           src={logo}
           alt="Site Logo"
           className="w-24 md:w-32 h-auto mb-6"
+          height={0}
+          width={0}
         />
         <MenuItems />
       </div>
@@ -78,12 +81,12 @@ const Vision = () => {
                 succeed, and build something amazing.
               </p>
               <div className="mt-8 flex justify-center space-x-4 font-visby">
-                <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center">
+                <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center">
                   Join Us <FaArrowRightLong className="ml-2" />
-                </button>
-                <button className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6">
+                </Link>
+                <Link href={"/GetInTouch"} className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6">
                   Contact
-                </button>
+                </Link>
               </div>
             </div>
           </div>

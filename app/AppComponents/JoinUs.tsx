@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function JoinUs() {
@@ -23,12 +24,12 @@ function JoinUs() {
           </p>
         </div>
         <div className=" flex space-x-4 font-visby">
-          <button className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
+          <Link href={"/GetInTouch"} className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
             Join Us <FaArrowRightLong className="ml-2" />
-          </button>
-          <button className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
+          </Link>
+          <Link href={"/GetInTouch"} className="bg-transparent font-hedvig-serif text-black border border-[#1E2028] py-3 px-6 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
             Contact
-          </button>
+          </Link>
         </div>
       </div>
     </div>

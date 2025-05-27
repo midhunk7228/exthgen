@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const InnovationSection = () => {
@@ -22,12 +23,12 @@ const InnovationSection = () => {
           </p>
         </div>
         <div className="mt-8 flex space-x-4 font-visby">
-          <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
+          <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
             Join Us <FaArrowRightLong className="ml-2" />
-          </button>
-          <button className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-base font-bold leading-6">
+          </Link>
+          <Link href={"/GetInTouch"} className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-base font-bold leading-6">
             Contact
-          </button>
+          </Link>
         </div>
       </div>
     </div>

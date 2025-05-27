@@ -82,10 +82,12 @@ const TestimonialSection = () => {
                   {testimonial.text}
                 </p>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                  <img
+                  <Image
                     src={`./Testimonials/${testimonial.avatar}`}
                     alt="Avatar"
                     className="w-12 h-12 rounded-full object-cover"
+                    width={0}
+                    height={0}
                   />
                 </div>
                 <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center mt-16">
