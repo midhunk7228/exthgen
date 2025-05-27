@@ -4,10 +4,9 @@ import React from "react";
 import { useAnimation } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
-import logo from "../assets/exthgen.svg"
+import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
 import Link from "next/link";
-
 
 const WaterDropWave = () => {
   const controls = useAnimation();
@@ -36,7 +35,7 @@ const WaterDropWave = () => {
       {/* <div className="absolute top-0 left-0 w-full h-full bg-black/30 z-10"></div> */}
 
       <div className="relative z-20 flex flex-col h-full">
-      <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between items-center">
+        <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between items-center">
           <Image
             src={logo}
             alt="Site Logo"

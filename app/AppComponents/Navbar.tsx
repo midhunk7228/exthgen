@@ -1,11 +1,9 @@
 "use client";
 
-
-import React from 'react'
-import MenuItems from './MenuItems'
-import logo from "../assets/exthgen.svg"
+import React from "react";
+import MenuItems from "./MenuItems";
+import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
-
 
 const Navbar = () => {
   return (
@@ -21,7 +19,7 @@ const Navbar = () => {
           <MenuItems />
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -2,12 +2,11 @@
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
-import logo from "../assets/exthgen.svg"
+import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 const Vision = () => {
-
   return (
     <div className="flex flex-col bg-[#E8ECEE] w-full relative overflow-hidden">
       {/* Background Video with Red Overlay */}
@@ -64,14 +63,14 @@ const Vision = () => {
           <div className="bg-white rounded-[36px] shadow-lg overflow-hidden -mt-20 ">
             <div className="px-10 md:px-20 py-8 flex flex-col justify-center items-center">
               <div className="flex justify-center items-center ">
-              <video
-                src="/tree-vid.mp4"
-                className="max-w-full h-[150px] rounded-full bg-transparent"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
+                <video
+                  src="/tree-vid.mp4"
+                  className="max-w-full h-[150px] rounded-full bg-transparent"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
               </div>
               <p className="text-sm md:text-lg leading-relaxed text-center font-normal">
                 We love working with small and medium businesses, helping them

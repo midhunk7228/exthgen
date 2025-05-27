@@ -3,11 +3,9 @@
 import { BsArrowUpRight } from "react-icons/bs";
 import MenuItems from "./MenuItems";
 import Image from "next/image";
-import logo from "../assets/exthgen.svg"
-
+import logo from "../Assets/exthgen.svg";
 
 const GetInTouch = () => {
-  
   return (
     <div className="flex min-h-screen bg-white">
       <div className="absolute top-0 left-0 right-0 md:pl-20 pl-6 flex justify-between items-center  py-4 bg-transparent z-10">
@@ -18,7 +16,7 @@ const GetInTouch = () => {
           height={0}
           width={0}
         />
-        <MenuItems/>
+        <MenuItems />
       </div>
 
       {/* Main content */}
