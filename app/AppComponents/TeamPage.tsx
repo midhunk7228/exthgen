@@ -126,7 +126,7 @@ export const revalidate = 3600; // Revalidate every hour
 async function getTeamMembers(): Promise<TeamMember[]> {
   try {
     const res = await fetch("https://api.www.exthgen.com/api/members/?populate=*", {
-      next: { revalidate: 0 }, // Better way to handle caching
+      next: { revalidate: 3600 }, // Better way to handle caching
     });
 
     if (!res.ok) {
