@@ -56,7 +56,7 @@ const GetInTouch = () => {
                 Phone
               </p>
               <a href="tel:+911233212300" className="text-2xl">
-                +91 123 32 123 00
+              +91 89210 07612
               </a>
             </div>
 
@@ -65,7 +65,7 @@ const GetInTouch = () => {
                 Address
               </p>
               <p className="text-2xl">
-                LLP, #2531, 5th Floor,
+              Exthgen Technologies LLP, #2531, 5th Floor,
                 <br />
                 Hilite Business Park,
                 <br />
