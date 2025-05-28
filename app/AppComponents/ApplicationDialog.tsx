@@ -804,7 +804,7 @@ const ApplicationDialog: React.FC<DialogProps> = ({ isOpen, onClose }) => {
     const form = new FormData();
     form.append("files", file);
 
-    const res = await fetch("http://localhost:1337/api/upload", {
+    const res = await fetch("https://api.www.exthgen.com/api/upload", {
       method: "POST",
       body: form,
     });
@@ -837,7 +837,7 @@ const ApplicationDialog: React.FC<DialogProps> = ({ isOpen, onClose }) => {
       console.log("Uploaded file:", uploadedFile);
 
       // Optional: send form data + file reference to a custom content type
-      await fetch("http://localhost:1337/api/applications", {
+      await fetch("https://api.www.exthgen.com/api/applications", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

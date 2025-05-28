@@ -117,6 +117,7 @@ interface TeamMember {
   memberName: string;
   memberRole: string;
   memberImage: { url: string };
+  order: number; // Added order field
 }
 
 // Add revalidation configuration
@@ -125,7 +126,7 @@ export const revalidate = 3600; // Revalidate every hour
 async function getTeamMembers(): Promise<TeamMember[]> {
   try {
     const res = await fetch("https://api.www.exthgen.com/api/members/?populate=*", {
-      next: { revalidate: 3600 }, // Better way to handle caching
+      next: { revalidate: 0 }, // Better way to handle caching
     });
 
     if (!res.ok) {
@@ -133,7 +134,10 @@ async function getTeamMembers(): Promise<TeamMember[]> {
     }
 
     const data = await res.json();
-    return data?.data || [];
+    const members = data?.data || [];
+    
+    // Sort by order field
+    return members.sort((a: TeamMember, b: TeamMember) => a.order - b.order);
   } catch (error) {
     console.error("Failed to fetch team members:", error);
     return [];
@@ -142,7 +146,6 @@ async function getTeamMembers(): Promise<TeamMember[]> {
 
 export default async function TeamPage() {
   const teamMembers = await getTeamMembers();
-  console.log(teamMembers, "loo");
 
   return (
     <div className="bg-white py-12">
@@ -187,55 +190,63 @@ export default async function TeamPage() {
                       name: "Saleeq",
                       role: "Director of everything",
                       image: { url: "./Team/saleeq-statue.png" },
+                      order: 1,
                     },
                     {
                       id: 2,
                       name: "Shaheed",
                       role: "Angel Richie",
                       image: { url: "./Team/shaheed-statue.png" },
+                      order: 2,
                     },
                     {
                       id: 3,
                       name: "Rishad",
                       role: "Tech Mavrerick",
                       image: { url: "./Team/rishad-statue.png" },
+                      order: 3,
                     },
                     {
                       id: 4,
                       name: "Sana",
                       role: "Design and Culture Curator",
                       image: { url: "./Team/sana-statue.png" },
+                      order: 4,
                     },
                     {
                       id: 5,
                       name: "Dilshad",
                       role: "Cool Dev",
                       image: { url: "./Team/dilshad-statue.png" },
+                      order: 5,
                     },
                     {
                       id: 6,
                       name: "Nabeel",
                       role: "Design and Culture Curator",
                       image: { url: "./Team/nabeel-statue.png" },
+                      order: 6,
                     },
-                  ].map((staticMember) => (
-                    <div
-                      key={staticMember.id}
-                      className="flex flex-col items-center"
-                    >
-                      <img
-                        className="w-96 h-72 rounded-[32px] object-cover"
-                        src={staticMember.image.url}
-                        alt={staticMember.name}
-                      />
-                      <h3 className="mt-4 text-2xl font-normal font-hedvig-serif">
-                        {staticMember.name}
-                      </h3>
-                      <p className="text-base font-medium bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
-                        {staticMember.role}
-                      </p>
-                    </div>
-                  ))}
+                  ]
+                    .sort((a, b) => a.order - b.order) // Sort static data by order too
+                    .map((staticMember) => (
+                      <div
+                        key={staticMember.id}
+                        className="flex flex-col items-center"
+                      >
+                        <img
+                          className="w-96 h-72 rounded-[32px] object-cover"
+                          src={staticMember.image.url}
+                          alt={staticMember.name}
+                        />
+                        <h3 className="mt-4 text-2xl font-normal font-hedvig-serif">
+                          {staticMember.name}
+                        </h3>
+                        <p className="text-base font-medium bg-gradient-to-r from-[#FD169C] via-[#FE497A] to-[#FE7B59] bg-clip-text text-transparent">
+                          {staticMember.role}
+                        </p>
+                      </div>
+                    ))}
             </div>
           </Suspense>
         </div>
