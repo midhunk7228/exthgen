@@ -44,7 +44,6 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
   currentPortfolio,
 }) => {
   const isMobile = useResponsive();
-  console.log(projects,"kll")
 
   // Format the date
   const formattedDate = new Date(currentPortfolio.createdAt).toLocaleDateString(
