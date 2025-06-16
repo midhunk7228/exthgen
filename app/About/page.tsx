@@ -12,7 +12,7 @@ function About() {
         <InnovationSection />
       </div>
       <TeamPage />
-      {/* <WhyWe /> */}
+      <WhyWe />
       {/* <BuyMeACoffee url="./footer-vid.mp4" /> */}
     </div>
   );
