@@ -89,16 +89,19 @@ function BuyMeACoffee({ url }: any) {
         </h1>
         <div className="flex flex-col w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
           <p className="text-center md:text-lg text-sm leading-7 gap-3 flex flex-col text-[#A7ACC1]">
-            We believe that true innovation creates ripples that go
-            beyond the ordinary. We specialize in crafting digital solutions
-            that are as unique as your vision. From building intuitive apps to
-            designing seamless user experiences, we’re here to help you make
-            waves in your industry. Connect with us today, and let’s create
-            something that moves the world forward, one ripple at a time.
+            We believe that true innovation creates ripples that go beyond the
+            ordinary. We specialize in crafting digital solutions that are as
+            unique as your vision. From building intuitive apps to designing
+            seamless user experiences, we’re here to help you make waves in your
+            industry. Connect with us today, and let’s create something that
+            moves the world forward, one ripple at a time.
           </p>
         </div>
         <div className="mt-8 flex space-x-4 font-visby md:pt-16 pt-4">
-          <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center">
+          <Link
+            href={"/GetInTouch"}
+            className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center"
+          >
             Free Brainstorm <FaArrowRightLong className="ml-2" />
           </Link>
         </div>

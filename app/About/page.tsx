@@ -12,8 +12,8 @@ function About() {
         <InnovationSection />
       </div>
       <TeamPage />
-      <WhyWe />
-      {/* <BuyMeACoffee url="./footer-vid.mp4" /> */}
+      {/* <WhyWe /> */}
+      <BuyMeACoffee url="./footer-vid.mp4" />
     </div>
   );
 }
