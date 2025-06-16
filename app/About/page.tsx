@@ -4,7 +4,6 @@ import TeamPage from "../AppComponents/TeamPage";
 import Vision from "../AppComponents/Vision";
 import WhyWe from "../AppComponents/WhyWe";
 
-
 function About() {
   return (
     <div className="flex flex-col">
@@ -12,9 +11,9 @@ function About() {
       <div className="flex pt-44 justify-center">
         <InnovationSection />
       </div>
-      <TeamPage />
+      {/* <TeamPage /> */}
       <WhyWe />
-      <BuyMeACoffee url="./footer-vid.mp4" />
+      {/* <BuyMeACoffee url="./footer-vid.mp4" /> */}
     </div>
   );
 }

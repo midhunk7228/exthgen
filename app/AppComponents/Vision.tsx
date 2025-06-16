@@ -13,6 +13,7 @@ const Vision = () => {
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <div className="absolute inset-0 bg-white opacity-70 z-10"></div>
         <video
+          suppressHydrationWarning
           autoPlay
           loop
           muted
@@ -70,6 +71,7 @@ const Vision = () => {
                   loop
                   muted
                   playsInline
+                  suppressHydrationWarning
                 />
               </div>
               <p className="text-sm md:text-lg leading-relaxed text-center font-normal">
@@ -80,10 +82,16 @@ const Vision = () => {
                 succeed, and build something amazing.
               </p>
               <div className="mt-8 flex justify-center space-x-4 font-visby">
-                <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center">
+                <Link
+                  href={"/GetInTouch"}
+                  className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center"
+                >
                   Join Us <FaArrowRightLong className="ml-2" />
                 </Link>
-                <Link href={"/GetInTouch"} className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6">
+                <Link
+                  href={"/GetInTouch"}
+                  className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6"
+                >
                   Contact
                 </Link>
               </div>
