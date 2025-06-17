@@ -1,6 +1,6 @@
 "use client";
 
-import { FaArrowRightLong } from "react-icons/fa6";
+// import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
@@ -80,10 +80,17 @@ const Vision = () => {
                 succeed, and build something amazing.
               </p>
               <div className="mt-8 flex justify-center space-x-4 font-visby">
-                <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center">
-                  Join Us <FaArrowRightLong className="ml-2" />
+                <Link
+                  href={"/GetInTouch"}
+                  className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-xs md:text-base font-bold leading-6 flex items-center"
+                >
+                  Join Us
+                  {/* <FaArrowRightLong className="ml-2" /> */}
                 </Link>
-                <Link href={"/GetInTouch"} className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6">
+                <Link
+                  href={"/GetInTouch"}
+                  className="bg-white text-gray-800 py-3 px-6 border border-gray-300 hover:bg-gray-100 rounded-full text-xs md:text-base font-bold leading-6"
+                >
                   Contact
                 </Link>
               </div>

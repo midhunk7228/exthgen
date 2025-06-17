@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useAnimation } from "framer-motion";
-import { FaArrowRightLong } from "react-icons/fa6";
+// import { FaArrowRightLong } from "react-icons/fa6";
 import MenuItems from "./MenuItems";
 import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
@@ -54,8 +54,12 @@ const WaterDropWave = () => {
           </h1>
 
           <div className="mt-8 flex space-x-4 font-visby mx-6 my-4">
-            <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-lg font-bold leading-6 flex items-center">
-              Think With Us <FaArrowRightLong className="ml-2" />
+            <Link
+              href={"/GetInTouch"}
+              className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-lg font-bold leading-6 flex items-center"
+            >
+              Think With Us
+              {/* <FaArrowRightLong className="ml-2" /> */}
             </Link>
           </div>
         </div>

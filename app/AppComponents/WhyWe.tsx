@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaArrowRightLong } from "react-icons/fa6";
+// import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhyWe = () => {
   return (
@@ -17,10 +17,14 @@ const WhyWe = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="lg:w-1/2 w-full mb-10 lg:mb-0 lg:pr-8 relative z-30"> {/* Added z-30 to place above the image */}
+      <div className="lg:w-1/2 w-full mb-10 lg:mb-0 lg:pr-8 relative z-30">
+        {" "}
+        {/* Added z-30 to place above the image */}
         <div className="hidden lg:block"></div>
       </div>
-      <div className="lg:w-1/2 w-full lg:-ml-20 lg:pr-4 relative z-30"> {/* Added z-30 to place above the image */}
+      <div className="lg:w-1/2 w-full lg:-ml-20 lg:pr-4 relative z-30">
+        {" "}
+        {/* Added z-30 to place above the image */}
         <div className="bg-white rounded-2xl md:rounded-[36px] shadow-lg overflow-hidden max-w-xl lg:max-w-3xl mx-auto">
           <div className="px-6 md:px-12 py-12 md:py-16 lg:py-20">
             <h2 className="text-base md:text-lg font-semibold mb-4 md:mb-6 text-left">
@@ -35,10 +39,17 @@ const WhyWe = () => {
               your unique needs are met with precision and care.
             </p>
             <div className="flex flex-row items-center justify-start gap-4 font-visby">
-              <Link href={"/Careers"} className="bg-exthgen-gradient text-white py-2 md:py-3 px-4 md:px-6 hover:bg-pink-600 rounded-full text-sm md:text-base font-bold leading-6 flex items-center">
-                Join Us <FaArrowRightLong className="ml-2" />
+              <Link
+                href={"/Careers"}
+                className="bg-exthgen-gradient text-white py-2 md:py-3 px-4 md:px-6 hover:bg-pink-600 rounded-full text-sm md:text-base font-bold leading-6 flex items-center"
+              >
+                Join Us
+                {/* <FaArrowRightLong className="ml-2" /> */}
               </Link>
-              <Link href={"/GetInTouch"} className="bg-white text-gray-800 py-2 md:py-3 px-4 md:px-6 border border-[#1E2028] hover:bg-gray-100 rounded-full text-sm md:text-base font-bold leading-6">
+              <Link
+                href={"/GetInTouch"}
+                className="bg-white text-gray-800 py-2 md:py-3 px-4 md:px-6 border border-[#1E2028] hover:bg-gray-100 rounded-full text-sm md:text-base font-bold leading-6"
+              >
                 Contact
               </Link>
             </div>

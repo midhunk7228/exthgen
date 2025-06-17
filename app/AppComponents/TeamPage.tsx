@@ -109,7 +109,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+// import { FaArrowRightLong } from "react-icons/fa6";
 
 // Move the interface to a separate types file
 interface TeamMember {
@@ -125,9 +125,12 @@ export const revalidate = 3600; // Revalidate every hour
 
 async function getTeamMembers(): Promise<TeamMember[]> {
   try {
-    const res = await fetch("https://api.www.exthgen.com/api/members/?populate=*", {
-      next: { revalidate: 3600 }, // Better way to handle caching
-    });
+    const res = await fetch(
+      "https://api.www.exthgen.com/api/members/?populate=*",
+      {
+        next: { revalidate: 3600 }, // Better way to handle caching
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch team members");
@@ -135,7 +138,7 @@ async function getTeamMembers(): Promise<TeamMember[]> {
 
     const data = await res.json();
     const members = data?.data || [];
-    
+
     // Sort by order field
     return members.sort((a: TeamMember, b: TeamMember) => a.order - b.order);
   } catch (error) {
@@ -252,8 +255,12 @@ export default async function TeamPage() {
         </div>
 
         <div className="mt-20 mb-24 flex space-x-4 font-visby justify-center">
-          <Link href={"/Careers"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
-            Join The Team <FaArrowRightLong className="ml-2" />
+          <Link
+            href={"/Careers"}
+            className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center"
+          >
+            Join The Team
+            {/* <FaArrowRightLong className="ml-2" /> */}
           </Link>
         </div>
       </div>
