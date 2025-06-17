@@ -16,7 +16,7 @@ export default function Portfolio() {
         <RecentProjectPage />
         <TestimonialSection />
         <JoinUs />
-        <BuyMeACoffee url="./footer-vid.mp4" />
+        <BuyMeACoffee />
       </Suspense>
     </div>
   );

@@ -114,8 +114,6 @@ export default async function BlogDetail({
     notFound();
   }
 
-
-
   return (
     <div className="flex flex-col">
       {/* Header */}
@@ -232,7 +230,7 @@ export default async function BlogDetail({
 
       <RelatedBlogs />
 
-      <BuyMeACoffee url="../footer-vid.mp4" />
+      <BuyMeACoffee />
     </div>
   );
 }

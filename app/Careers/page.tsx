@@ -3,14 +3,13 @@ import CareerHeader from "../AppComponents/CareerHeader";
 import CareerMain from "../AppComponents/CareerMain";
 import CoolThings from "../AppComponents/CoolThings";
 
-
 function Careers() {
   return (
     <div className="flex flex-col">
       <CareerHeader />
-      <CareerMain  />
+      <CareerMain />
       <CoolThings />
-      <BuyMeACoffee url="./footer-vid.mp4"/>
+      <BuyMeACoffee />
     </div>
   );
 }

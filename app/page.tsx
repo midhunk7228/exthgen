@@ -9,14 +9,14 @@ import WhatWeOfferLogos from "./AppComponents/WhatWeOfferLogos";
 
 export default function Home() {
   return (
-    <div className='min-h-screen w-full'>
-      <WaterDropWave />    
-      <WhatweOffer  />  
+    <div className="min-h-screen w-full">
+      <WaterDropWave />
+      <WhatweOffer />
       <WhatWeOfferLogos />
       <ProjectList />
       <TestimonialSection />
       <InnovationSection />
-      <BuyMeACoffee url="./footer-vid.mp4"/>
+      <BuyMeACoffee />
     </div>
   );
 }

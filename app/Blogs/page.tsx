@@ -49,7 +49,7 @@ export default async function Blogs() {
         <BlogList blogs={blogs} />
       </Suspense>
       <JoinUs />
-      <BuyMeACoffee url="./footer-vid.mp4" />
+      <BuyMeACoffee />
     </div>
   );
 }

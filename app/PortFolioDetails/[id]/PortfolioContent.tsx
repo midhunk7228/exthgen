@@ -152,7 +152,10 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
                 Checkout <FaArrowRightLong className="ml-2" />
               </Link>
             )} */}
-            <Link href="/GetInTouch" className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center">
+            <Link
+              href="/GetInTouch"
+              className="bg-exthgen-gradient font-hedvig-serif text-white py-3 px-6 hover:bg-pink-600 cursor-pointer rounded-full text-sm font-bold leading-6 flex items-center"
+            >
               Checkout <FaArrowRightLong className="ml-2" />
             </Link>
             <Link
@@ -265,16 +268,16 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
               isMobile ? "w-full aspect-square px-3" : "w-full"
             }`}
           >
-              <Image
-                src={`https://api.www.exthgen.com${image.url}`}
-                alt={image.name}
-                className={`rounded-[32px] object-cover ${
-                  isMobile ? "w-full aspect-square" : "w-full"
-                }`}
-                width={0}
-                height={0}
-                layout="responsive"
-              />
+            <Image
+              src={`https://api.www.exthgen.com${image.url}`}
+              alt={image.name}
+              className={`rounded-[32px] object-cover ${
+                isMobile ? "w-full aspect-square" : "w-full"
+              }`}
+              width={0}
+              height={0}
+              layout="responsive"
+            />
           </div>
         ))}
 
@@ -314,7 +317,7 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({
           </div>
         )}
       </div>
-      <BuyMeACoffee url="../footer-vid.mp4" />
+      <BuyMeACoffee />
     </div>
   );
 };
