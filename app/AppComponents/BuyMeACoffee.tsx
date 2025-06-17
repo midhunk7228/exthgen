@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
-import {
-  LiaFacebookSquare,
-  LiaInstagram,
-  LiaLinkedin,
-  LiaWhatsapp,
-} from "react-icons/lia";
-import { RiTwitterXLine } from "react-icons/ri";
+// import { FaArrowRightLong } from "react-icons/fa6";
+// import {
+//   LiaFacebookSquare,
+//   LiaInstagram,
+//   LiaLinkedin,
+//   LiaWhatsapp,
+// } from "react-icons/lia";
+// import { RiTwitterXLine } from "react-icons/ri";
 
 const BuyMeACoffee = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -60,7 +60,8 @@ const BuyMeACoffee = () => {
             href={"/GetInTouch"}
             className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-sm font-hedvig-serif font-bold leading-6 flex items-center"
           >
-            Free Brainstorm <FaArrowRightLong className="ml-2" />
+            Free Brainstorm
+            {/* <FaArrowRightLong className="ml-2" /> */}
           </Link>
         </div>
       </div>
@@ -71,7 +72,7 @@ const BuyMeACoffee = () => {
           rel="noopener noreferrer"
           className="flex border border-[#666666] rounded-full px-2 py-1"
         >
-          <LiaFacebookSquare className="text-2xl text-[#666666]" />
+          {/* <LiaFacebookSquare className="text-2xl text-[#666666]" /> */}
         </a>
         <a
           href="https://www.instagram.com/exthgen"
@@ -79,13 +80,13 @@ const BuyMeACoffee = () => {
           rel="noopener noreferrer"
           className="flex border border-[#666666] rounded-full px-2 py-1"
         >
-          <LiaInstagram className="text-2xl text-[#666666]" />
+          {/* <LiaInstagram className="text-2xl text-[#666666]" /> */}
         </a>
         <div className="flex border border-[#666666] rounded-full px-2 py-1">
-          <LiaWhatsapp className="text-2xl text-[#666666]" />
+          {/* <LiaWhatsapp className="text-2xl text-[#666666]" /> */}
         </div>
         <div className="flex border border-[#666666] rounded-full px-3 py-1 pt-2">
-          <RiTwitterXLine className="text-base text-[#666666]" />
+          {/* <RiTwitterXLine className="text-base text-[#666666]" /> */}
         </div>
         <a
           href="https://www.linkedin.com/company/exthgen/"
@@ -93,7 +94,7 @@ const BuyMeACoffee = () => {
           rel="noopener noreferrer"
           className="flex border border-[#666666] rounded-full px-2 py-1"
         >
-          <LiaLinkedin className="text-2xl text-[#666666]" />
+          {/* <LiaLinkedin className="text-2xl text-[#666666]" /> */}
         </a>
       </div>
     </div>
