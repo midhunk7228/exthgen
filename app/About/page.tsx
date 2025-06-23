@@ -13,7 +13,7 @@ function About() {
       </div>
       <TeamPage />
       {/* <WhyWe /> */}
-      <BuyMeACoffee />
+      {/* <BuyMeACoffee /> */}
     </div>
   );
 }
