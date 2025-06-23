@@ -1,13 +1,17 @@
 "use client";
 
 import { FaArrowRightLong } from "react-icons/fa6";
-import MenuItems from "./MenuItems";
+// import MenuItems from "./MenuItems";
 import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import("./MenuItems"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+});
 const ServiceHeader = () => {
-
   return (
     <div className="flex flex-col bg-white w-full relative overflow-hidden">
       {/* Content */}
@@ -34,14 +38,17 @@ const ServiceHeader = () => {
           </h1>
           <div className="flex flex-col w-full px-3 md:w-2/3 justify-center gap-4 pt-6 font-visby font-normal">
             <p className="text-center text-[#323442] text-sm md:text-lg lg:text-lg font-light leading-7 gap-3 flex flex-col">
-              We don’t just deliver services — we craft experiences.
-              From custom app development and seamless UI/UX to powerful backend
-              solutions, every project we take on is a step toward meaningful
-              innovation. We push boundaries, exceed expectations, and build
-              lasting partnerships through high-quality, future-ready solutions.
+              We don’t just deliver services — we craft experiences. From custom
+              app development and seamless UI/UX to powerful backend solutions,
+              every project we take on is a step toward meaningful innovation.
+              We push boundaries, exceed expectations, and build lasting
+              partnerships through high-quality, future-ready solutions.
             </p>
           </div>
-          <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center mt-8">
+          <Link
+            href={"/GetInTouch"}
+            className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center mt-8"
+          >
             Let’s Talk <FaArrowRightLong className="ml-2" />
           </Link>
         </div>

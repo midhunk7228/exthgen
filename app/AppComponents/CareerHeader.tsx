@@ -1,13 +1,17 @@
 "use client";
 
 import { FaArrowRightLong } from "react-icons/fa6";
-import MenuItems from "./MenuItems";
+// import MenuItems from "./MenuItems";
+
 import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
 import Link from "next/link";
-
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import("./MenuItems"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+});
 const CareerHeader = () => {
-
   return (
     <div className="flex flex-col bg-white w-full relative overflow-hidden">
       {/* Content */}
@@ -34,15 +38,18 @@ const CareerHeader = () => {
           </h1>
           <div className="flex flex-col w-2/3 justify-center gap-4 pt-6 px-6 md:px-0 font-visby font-normal w-full max-w-2xl">
             <p className="text-center text-[#323442] text-lg font-light leading-7 gap-3 flex flex-col ">
-              We’re more than a tech company — we’re a collective of
-              creators, thinkers, and builders shaping tomorrow’s digital waves.
-              If you're passionate about pushing boundaries, designing impactful
+              We’re more than a tech company — we’re a collective of creators,
+              thinkers, and builders shaping tomorrow’s digital waves. If you're
+              passionate about pushing boundaries, designing impactful
               experiences, and leaving a lasting ripple in the tech world,
               you’ll feel right at home here.
             </p>
           </div>
           <div className="mt-8 flex space-x-4 font-visby ">
-            <Link href={"/GetInTouch"} className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center">
+            <Link
+              href={"/GetInTouch"}
+              className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-md font-hedvig-serif font-bold leading-6 flex items-center"
+            >
               Let's Talk <FaArrowRightLong className="ml-2" />
             </Link>
           </div>

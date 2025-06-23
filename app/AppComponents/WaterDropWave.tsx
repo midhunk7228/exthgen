@@ -3,10 +3,16 @@
 import React from "react";
 import { useAnimation } from "framer-motion";
 // import { FaArrowRightLong } from "react-icons/fa6";
-import MenuItems from "./MenuItems";
+// import MenuItems from "./MenuItems";
 import logo from "../Assets/exthgen.svg";
 import Image from "next/image";
 import Link from "next/link";
+
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import("./MenuItems"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+});
 
 const WaterDropWave = () => {
   const controls = useAnimation();

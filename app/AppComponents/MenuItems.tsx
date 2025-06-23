@@ -1,133 +1,103 @@
 "use client";
 
-// import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 import { TbMenu } from "react-icons/tb";
 
+const menuItems = [
+  { title: "Home", link: "/" },
+  { title: "About", link: "/About" },
+  { title: "Careers", link: "/Careers" },
+  { title: "Services", link: "/Services" },
+  { title: "Portfolio", link: "/Portfolio" },
+  { title: "Blogs", link: "/Blogs" },
+  { title: "Contact", link: "/GetInTouch" },
+];
+
 function MenuItems() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      const originalStyle = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
-
-      return () => {
-        document.body.style.overflow = originalStyle;
-      };
-    }
-  }, [isMenuOpen]);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const menuItems = [
-    { title: "Home", link: "/" },
-    { title: "About", link: "/About" },
-    { title: "Careers", link: "/Careers" },
-    { title: "Services", link: "/Services" },
-    { title: "Portfolio", link: "/Portfolio" },
-    { title: "Blogs", link: "/Blogs" },
-    { title: "Contact", link: "/GetInTouch" },
-  ];
-
-  const menuVariants = {
-    hidden: { opacity: 0, x: "100%" },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-    exit: {
-      opacity: 0,
-      x: "100%",
-      transition: { duration: 0.3, ease: "easeInOut" },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: 0.3 + i * 0.1, duration: 0.5 },
-    }),
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <div>
-      {/* <AnimatePresence> */}
+    <>
+      <style jsx>{`
+        .menu-enter {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        .menu-enter-active {
+          transform: translateX(0);
+          opacity: 1;
+          transition: all 0.3s ease-out;
+        }
+        .menu-item {
+          opacity: 0;
+          transform: translateY(20px);
+          animation: slideIn 0.5s ease-out forwards;
+        }
+        @keyframes slideIn {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        body.menu-open {
+          overflow: hidden;
+        }
+      `}</style>
+
+      {/* Backdrop */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-white z-[999] flex flex-col justify-center shadow-xl"
-          // variants={menuVariants}
-          // initial="hidden"
-          // animate="visible"
-          // exit="exit"
-        >
-          <div className="px-12 py-8 h-full flex flex-col justify-center">
-            <nav className="flex flex-col items-end gap-6">
-              {menuItems.map((item, i) => (
-                <div
-                  key={item.title}
-                  // custom={i}
-                  // variants={itemVariants}
-                  // initial="hidden"
-                  // animate="visible"
-                >
-                  <Link
-                    href={item.link}
-                    className="text-right text-[#1E2028] text-4xl md:text-5xl font-hedvig-serif mb-8 hover:text-gray-600 transition-colors"
-                    onClick={toggleMenu}
-                  >
-                    {item.title}
-                  </Link>
-                </div>
-              ))}
-            </nav>
-          </div>
-        </div>
+          className="fixed inset-0 bg-black bg-opacity-30 z-40"
+          onClick={toggleMenu}
+        />
       )}
-      {/* </AnimatePresence> */}
 
-      {/* Menu Button */}
-      <div className="relative z-[9999] flex flex-col h-full">
+      {/* Menu */}
+      <div
+        className={`
+        fixed top-0 right-0 h-full w-full bg-white z-50 flex flex-col justify-center shadow-xl
+        transition-transform duration-300 ease-out
+        ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
+      `}
+      >
+        <nav className="px-12 flex flex-col items-end gap-8">
+          {menuItems.map((item, i) => (
+            <Link
+              key={item.title}
+              href={item.link}
+              className="text-right text-[#1E2028] text-4xl md:text-5xl font-hedvig-serif hover:text-gray-600 transition-colors"
+              onClick={toggleMenu}
+              style={{
+                animationDelay: isMenuOpen ? `${i * 0.1}s` : "0s",
+              }}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </nav>
+      </div>
+
+      {/* Toggle Button */}
+      <div className="relative z-50">
         <div className="flex md:pl-20 pl-6 md:py-5 py-3 justify-between">
-          <div
-            className="h-12 md:h-16 w-12 md:w-16 rounded-full bg-white mr-6 md:mr-16 shadow-md flex items-center justify-center cursor-pointer"
+          <button
             onClick={toggleMenu}
-            // whileTap={{ scale: 0.95 }}
+            className="h-12 md:h-16 w-12 md:w-16 rounded-full bg-white shadow-md flex items-center justify-center transition-transform hover:scale-105"
+            aria-label="Toggle menu"
           >
-            {/* <AnimatePresence mode="wait"> */}
             {isMenuOpen ? (
-              <div
-                key="close"
-                // initial={{ rotate: -90, opacity: 0 }}
-                // animate={{ rotate: 0, opacity: 1 }}
-                // exit={{ rotate: 90, opacity: 0 }}
-                // transition={{ duration: 0.3 }}
-              >
-                <IoMdClose className="text-3xl text-[#171718]" />
-              </div>
+              <IoMdClose className="text-3xl text-[#171718]" />
             ) : (
-              <div
-                key="menu"
-                // initial={{ rotate: 90, opacity: 0 }}
-                // animate={{ rotate: 0, opacity: 1 }}
-                // exit={{ rotate: -90, opacity: 0 }}
-                // transition={{ duration: 0.3 }}
-              >
-                <TbMenu className="text-3xl text-[#171718]" />
-              </div>
+              <TbMenu className="text-3xl text-[#171718]" />
             )}
-            {/* </AnimatePresence> */}
-          </div>
+          </button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,10 +1,15 @@
 "use client";
 
 import { BsArrowUpRight } from "react-icons/bs";
-import MenuItems from "./MenuItems";
+// import MenuItems from "./MenuItems";
 import Image from "next/image";
 import logo from "../Assets/exthgen.svg";
 
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import("./MenuItems"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+});
 const GetInTouch = () => {
   return (
     <div className="flex min-h-screen bg-white">
@@ -56,7 +61,7 @@ const GetInTouch = () => {
                 Phone
               </p>
               <a href="tel:+911233212300" className="text-2xl">
-              +91 89210 07612
+                +91 89210 07612
               </a>
             </div>
 
@@ -65,7 +70,7 @@ const GetInTouch = () => {
                 Address
               </p>
               <p className="text-2xl">
-              Exthgen Technologies LLP, #2531, 5th Floor,
+                Exthgen Technologies LLP, #2531, 5th Floor,
                 <br />
                 Hilite Business Park,
                 <br />

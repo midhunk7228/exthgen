@@ -6,10 +6,15 @@ import { MdOutlineWhatsapp } from "react-icons/md";
 import { FiYoutube } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
-import MenuItems from "@/app/AppComponents/MenuItems";
+// import MenuItems from "@/app/AppComponents/MenuItems";
 import RelatedBlogs from "@/app/AppComponents/RelatedBlogs";
 import BuyMeACoffee from "@/app/AppComponents/BuyMeACoffee";
 
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import("@/app/AppComponents/MenuItems"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+});
 interface Blog {
   id: number;
   blogTitle: string;

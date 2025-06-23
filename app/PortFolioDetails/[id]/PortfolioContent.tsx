@@ -1,12 +1,17 @@
 "use client";
 import { useResponsive } from "@/hooks/useResponsive";
 import { FaArrowRightLong } from "react-icons/fa6";
-import MenuItems from "../../AppComponents/MenuItems";
+// import MenuItems from "../../AppComponents/MenuItems";
 import { ProjectCard } from "../../AppComponents/PojectList";
 import BuyMeACoffee from "../../AppComponents/BuyMeACoffee";
 import Image from "next/image";
 import Link from "next/link";
 
+import dynamic from "next/dynamic";
+const MenuItems = dynamic(() => import("../../AppComponents/MenuItems"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+});
 // Define the Portfolio and Project interfaces
 interface Portfolio {
   id: number;
