@@ -12,8 +12,10 @@ function About() {
         <InnovationSection />
       </div>
       <TeamPage />
-      <WhyWe />
-      <BuyMeACoffee />
+      <Vision />
+      <Vision />
+      {/* <WhyWe />
+      <BuyMeACoffee /> */}
     </div>
   );
 }
