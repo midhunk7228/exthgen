@@ -41,21 +41,6 @@ const Vision = () => {
         <h1 className="flex text-center md:text-[64px] text-[30px] md:leading-[80px] leading-[38px] font-normal font-hedvig-serif">
           Vision Matters
         </h1>
-
-        {/* <div className="md:hidden">
-          <p className="text-lg leading-relaxed text-center font-normal mt-4 px-4">
-            We love working with small and medium businesses, helping them grow
-            with tech that just works. Our goal is to keep things simple,
-            scalable, and useful so every business, no matter how small, can
-            reach its full potential. Together, let's grow, succeed, and build
-            something amazing.
-          </p>
-          <div className="mt-8 flex justify-center space-x-4 font-visby">
-            <button className="bg-exthgen-gradient text-white py-3 px-6 hover:bg-pink-600 rounded-full text-base font-bold leading-6 flex items-center">
-              Free Brainstorm <FaArrowRightLong className="ml-2" />
-            </button>
-          </div>
-        </div> */}
       </div>
 
       <div className=" md:flex flex-col items-center justify-center bg-white relative  pb-[3.25rem]">
