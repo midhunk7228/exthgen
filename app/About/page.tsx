@@ -1,8 +1,21 @@
-import BuyMeACoffee from "../AppComponents/BuyMeACoffee";
+import dynamic from "next/dynamic";
+// import BuyMeACoffee from "../AppComponents/BuyMeACoffee";
 import InnovationSection from "../AppComponents/InnovationSection";
 import TeamPage from "../AppComponents/TeamPage";
 import Vision from "../AppComponents/Vision";
-import WhyWe from "../AppComponents/WhyWe";
+// import WhyWe from "../AppComponents/WhyWe";
+
+const WhyWe = dynamic(() => import("../AppComponents/WhyWe"), {
+  loading: () => (
+    <div className="h-96 bg-[#E8ECEE] animate-pulse flex items-center justify-center">
+      <div className="text-gray-500">Loading...</div>
+    </div>
+  ),
+});
+
+const BuyMeACoffee = dynamic(() => import("../AppComponents/BuyMeACoffee"), {
+  loading: () => <div className="h-96 bg-black animate-pulse" />,
+});
 
 function About() {
   return (
@@ -12,10 +25,8 @@ function About() {
         <InnovationSection />
       </div>
       <TeamPage />
-      <Vision />
-      <Vision />
-      {/* <WhyWe />
-      <BuyMeACoffee /> */}
+      <WhyWe />
+      <BuyMeACoffee />
     </div>
   );
 }

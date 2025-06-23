@@ -20,7 +20,7 @@ const Vision = () => {
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
         >
           {/* <source src="./path/to/your/background-video.mp4" type="video/mp4" /> */}
-          <source src="/multiple_ripple.mp4" type="video/mp4" />
+          <source src="./Videos/multiple_ripple.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -49,7 +49,7 @@ const Vision = () => {
             <div className="px-10 md:px-20 py-8 flex flex-col justify-center items-center">
               <div className="flex justify-center items-center ">
                 <video
-                  src="/tree-vid.mp4"
+                  src="./Videos/tree-vid.mp4"
                   className="max-w-full h-[150px] rounded-full bg-transparent"
                   autoPlay
                   loop
