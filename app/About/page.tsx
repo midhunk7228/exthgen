@@ -18,6 +18,7 @@ const BuyMeACoffee = dynamic(() => import("../AppComponents/BuyMeACoffee"), {
 });
 
 function About() {
+  console.log("test...");
   return (
     <div className="flex flex-col">
       <Vision />
