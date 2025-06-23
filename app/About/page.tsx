@@ -25,7 +25,7 @@ function About() {
         <InnovationSection />
       </div>
       <TeamPage />
-      <WhyWe />
+      {/* <WhyWe /> */}
       <BuyMeACoffee />
     </div>
   );
