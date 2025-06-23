@@ -16,7 +16,7 @@ export default function Home() {
       <ProjectList />
       <TestimonialSection />
       <InnovationSection />
-      {/* <BuyMeACoffee /> */}
+      <BuyMeACoffee />
     </div>
   );
 }

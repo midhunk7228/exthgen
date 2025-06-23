@@ -33,7 +33,7 @@ const BuyMeACoffee = () => {
         muted
         playsInline
       >
-        <source src="./footer-vid.mp4" type="video/mp4" />
+        <source src="./ripple.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
